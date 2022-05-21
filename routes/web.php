@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('/home', function () {
     return view('pages.landing-page.home');
 });
+
+Route::get('/profile', function () {
+    return view('pages.landing-page.profile');
+});
