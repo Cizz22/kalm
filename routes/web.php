@@ -2,8 +2,10 @@
 
 use App\Http\Controllers\Authentication\LoginController;
 use App\Http\Controllers\Authentication\RegisterController;
+use App\Http\Controllers\Konsultasi\KonsultasiController;
 use App\Http\Controllers\Landing\HomeController;
 use App\Http\Controllers\Landing\ProfileController;
+use App\Models\Konsultasi;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,11 +28,17 @@ use Illuminate\Support\Facades\Route;
 
     //Landing Page
     Route::middleware('auth')->group(function () {
-        Route::get('/home', [HomeController::class, 'index'])->name('home');
-        Route::get('/profile' , [ProfileController::class, 'index'])->name('profile');
+        Route::get('/home', [HomeController::class, 'index'])->name('landing.home');
+        Route::get('/profile' , [ProfileController::class, 'index'])->name('landing.profile');
     });
 
     //Konsultasi
+    Route::middleware('auth')->group(function () {
+        Route::get('/konsultasi', [KonsultasiController::class, 'index'])->name('konsutalsi.home');
+        Route::get('/konsutalsi/psikolog', [KonsultasiController::class, 'choosePsikolog'])->name('konsultasi.psikolog');
+        Route::get('/konstulasi/paket',[KonsultasiController::class,'paket'])->name('konsultasi.paket');
+        Route::get('konsultasi/checkout', [KonsultasiController::class,'checkout'])->name('konsultasi.checkout');
+    });
 
     //Journaling
 
