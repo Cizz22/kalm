@@ -102,7 +102,7 @@ class KonsultasiController extends Controller
             'sesi_id' => $konsultasi->sesi_id
         ]);
 
-        redirect()->route('konsultasi.checkout', ['konsultasiId' => $userKonsultasi->id]);
+        redirect()->route('konsultasi.checkout', ['konsultasiId' => $userKonsultasi->id])->with('voucher', $voucher);
     }
 
 
