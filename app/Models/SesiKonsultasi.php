@@ -12,6 +12,6 @@ class SesiKonsultasi extends Model
     protected $fillable = ['name', 'jadwal'];
 
     public function konsultasi() {
-        return $this->hasMany(Konsultasi::class, 'topik_id');
+        return $this->hasMany(Konsultasi::class, 'sesi_id');
     }
 }

@@ -19,6 +19,7 @@ class CreateKonsultasisTable extends Migration
             $table->unsignedBigInteger('psikolog_id');
             $table->unsignedBigInteger('paket_id');
             $table->unsignedBigInteger('topik_id');
+            $table->unsignedBigInteger('sesi_id');
             $table->timestamps();
         });
     }

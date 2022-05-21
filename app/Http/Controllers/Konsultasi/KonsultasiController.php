@@ -3,7 +3,13 @@
 namespace App\Http\Controllers\Konsultasi;
 
 use App\Http\Controllers\Controller;
+use App\Models\Konsultasi;
+use App\Models\PaketKonsultasi;
+use App\Models\SesiKonsultasi;
+use App\Models\TopikKonsultasi;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class KonsultasiController extends Controller
 {
@@ -14,7 +20,9 @@ class KonsultasiController extends Controller
      */
     public function index()
     {
-        //
+        $topik = TopikKonsultasi::all();
+        $sesi = SesiKonsultasi::all();
+        return view('pages.konsultasi.index', compact(['topik', 'sesi']));
     }
 
     /**
@@ -22,64 +30,86 @@ class KonsultasiController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function postSchedule(Request $request)
     {
-        //
+        $validate = $request->validate(([
+            'topik_id' => 'required',
+            'sesi_id' => 'required'
+        ]));
+
+        if (empty($request->session()->get('konsultasi'))) {
+            $konsultasi = new Konsultasi();
+            $konsultasi->fill($validate);
+            $request->session()->put('konsultasi', $konsultasi);
+        } else {
+            $konsultasi = $request->session()->get('konsultasi');
+            $konsultasi->fill($validate);
+            $request->session()->put('konsultasi', $konsultasi);
+        }
+
+        return redirect()->route('konsultasi.psikolog');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+
+    public function psikolog()
     {
-        //
+        $psikolog = User::where('tipeakun', 'psikolog')->get();
+        return view('pages.konsultasi.psikolog', compact('psikolog'));
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
+
+    public function postPsikolog(Request $request)
     {
-        //
+        $validate = $request->validate([
+            'psikolog_id' => 'required'
+        ]);
+
+        if (empty($request->session()->get('konsultasi'))) {
+            $konsultasi = new Konsultasi();
+            $konsultasi->fill($validate);
+            $request->session()->put('konsultasi', $konsultasi);
+        } else {
+            $konsultasi = $request->session()->get('konsultasi');
+            $konsultasi->fill($validate);
+            $request->session()->put('konsultasi', $konsultasi);
+        }
+
+        redirect()->route('konsultasi.paket');
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
+    public function paket()
     {
-        //
+        $paket = PaketKonsultasi::all();
+
+        return view('pages.konsultasi.paket', compact('paket'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
+
+    public function postKonsultasi(Request $request)
     {
-        //
+        $request->validate([
+            'paket_id' => 'required'
+        ]);
+
+        $voucher = $request->voucher;
+        $konsultasi = $request->session()->get('konsultasi');
+
+        $userKonsultasi = Konsultasi::create([
+            'user_id' => Auth::user()->id,
+            'psikolog_id' => $konsultasi->psikolog_id,
+            'paket_id' => $konsultasi->paket_id,
+            'topik_id' => $konsultasi->topik_id,
+            'sesi_id' => $konsultasi->sesi_id
+        ]);
+
+        redirect()->route('konsultasi.checkout', ['konsultasiId' => $userKonsultasi->id]);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
+
+    public function checkout($konsultasiId)
     {
-        //
+        $konsultasi = Konsultasi::find($konsultasiId);
+
+        return view('pages.konsultasi.checkout', compact('konsultasi'));
     }
 }

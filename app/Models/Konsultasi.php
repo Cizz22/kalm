@@ -13,7 +13,8 @@ class Konsultasi extends Model
         'user_id',
         'psikolog_id',
         'paket_id',
-        'topik_id'
+        'topik_id',
+        'sesi_id'
     ];
 
     public function user(){
@@ -30,6 +31,10 @@ class Konsultasi extends Model
 
     public function topik(){
         return $this->belongsTo(TopikKonsultasi::class, 'topik_id');
+    }
+
+    public function sesi(){
+        return $this->belongsTo(SesiKonsultasi::class, 'sesi_id');
     }
 
     public function hasil(){

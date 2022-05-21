@@ -34,10 +34,16 @@ use Illuminate\Support\Facades\Route;
 
     //Konsultasi
     Route::middleware('auth')->group(function () {
-        Route::get('/konsultasi', [KonsultasiController::class, 'index'])->name('konsutalsi.home');
-        Route::get('/konsutalsi/psikolog', [KonsultasiController::class, 'choosePsikolog'])->name('konsultasi.psikolog');
+        Route::get('/konsultasi', [KonsultasiController::class, 'index'])->name('konsultasi.home');
+        Route::post('/konsultasi', [KonsultasiController::class, 'postSchedule'])->name('konsultasi.schedule.post');
+
+        Route::get('/konsutalsi/psikolog', [KonsultasiController::class, 'psikolog'])->name('konsultasi.psikolog');
+        Route::post('/konsultasi/psikolog', [KonsultasiController::class, 'postPsikolog'])->name('konsultasi.psikolog.post');
+
         Route::get('/konstulasi/paket',[KonsultasiController::class,'paket'])->name('konsultasi.paket');
-        Route::get('konsultasi/checkout', [KonsultasiController::class,'checkout'])->name('konsultasi.checkout');
+        Route::post('/konsultasi/save', [KonsultasiController::class, 'postKonsultasi'])->name('konsultasi.post');
+
+        Route::get('konsultasi/checkout/:konsultasiId', [KonsultasiController::class,'checkout'])->name('konsultasi.checkout');
     });
 
     //Journaling
