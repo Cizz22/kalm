@@ -11,4 +11,6 @@ class MeditationTopic extends Model
 
     protected $fillable = ['user_id', 'topik_id' , 'lagu_id'];
 
+
+
 }
