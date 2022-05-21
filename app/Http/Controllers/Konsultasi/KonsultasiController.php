@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Konsultasi;
 use App\Http\Controllers\Controller;
 use App\Models\Konsultasi;
 use App\Models\PaketKonsultasi;
+use App\Models\PsikologFavorite;
 use App\Models\SesiKonsultasi;
 use App\Models\TopikKonsultasi;
 use App\Models\User;
@@ -111,5 +112,14 @@ class KonsultasiController extends Controller
         $konsultasi = Konsultasi::find($konsultasiId);
 
         return view('pages.konsultasi.checkout', compact('konsultasi'));
+    }
+
+    public function savePsikologFavorit(Request $request){
+        $psikolog = $request->all();
+
+        PsikologFavorite::create([
+            'user_id' => Auth::user()->id,
+            'psikolog_id' => $psikolog
+        ]);
     }
 }
