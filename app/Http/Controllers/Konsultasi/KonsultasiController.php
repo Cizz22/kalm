@@ -122,4 +122,10 @@ class KonsultasiController extends Controller
             'psikolog_id' => $psikolog
         ]);
     }
+
+    public function searchPsikolog(Request $request){
+        $search = $request->search;
+
+
+    }
 }

@@ -40,7 +40,7 @@
         </nav>
     </div>
     <!--Container Main start-->
-    <div class="bg-light">
+    <div>
         @yield('content')
     </div>
     <!--Container Main end-->
