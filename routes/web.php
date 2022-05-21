@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\Authentication\LoginController;
 use App\Http\Controllers\Authentication\RegisterController;
+use App\Http\Controllers\Landing\HomeController;
+use App\Http\Controllers\Landing\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,6 +25,34 @@ use Illuminate\Support\Facades\Route;
 
 
     //Landing Page
+    Route::middleware('auth')->group(function () {
+        Route::get('/home', [HomeController::class, 'index'])->name('home');
+        Route::get('/profile' , [ProfileController::class, 'index'])->name('profile');
+    });
+
+    //Konsultasi
+
+    //Journaling
+
+    //Meditate
+
+
+
+
+    //Testing (Kasil 'testing/' pas mau ngecek halaman, misal, localhost::3000/testing/home)
+    Route::prefix('testing')->group(function () {
+        Route::get('/', function () {
+            return view('layouts.layout');
+        });
+
+        Route::get('/home', function () {
+            return view('pages.landing-page.home');
+        });
+
+        Route::get('/profile', function () {
+            return view('pages.landing-page.profile');
+        });
+    });
 
 
 
@@ -70,21 +100,3 @@ use Illuminate\Support\Facades\Route;
 //         return view('dashboard');
 //     })->name('dashboard');
 // //});
-
-
-
-
-
-
-
-Route::get('/', function () {
-    return view('layouts.layout');
-});
-
-Route::get('/home', function () {
-    return view('pages.landing-page.home');
-});
-
-Route::get('/profile', function () {
-    return view('pages.landing-page.profile');
-});
