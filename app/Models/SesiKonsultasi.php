@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class SesiKonsultasi extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['name', 'jadwal'];
+
+    public function konsultasi() {
+        return $this->hasMany(Konsultasi::class, 'topik_id');
+    }
 }

@@ -15,7 +15,7 @@ class CreateJurnalsTable extends Migration
     {
         Schema::create('jurnals', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('title');
+            $table->unsignedBigInteger('user_id');
             $table->string('judul');
             $table->unsignedBigInteger('template_id');
             $table->timestamps();

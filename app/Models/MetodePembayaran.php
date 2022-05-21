@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class MetodePembayaran extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['nama'];
+
+    public function transaksi(){
+        return $this->hasMany(Transaksi::class, 'metode_id');
+    }
 }

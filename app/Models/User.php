@@ -42,4 +42,18 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function laguFavorit(){
+        return $this->hasMany(LaguMeditasiFavorite::class);
+    }
+
+    public function psikologFavorit(){
+        return $this->hasMany(PsikologFavorite::class, 'psikolog_id');
+    }
+    public function konsultasi(){
+        return $this->hasMany(Konsultasi::class);
+    }
+    public function jurnal() {
+        $this->hasMany(Jurnal::class);
+    }
 }

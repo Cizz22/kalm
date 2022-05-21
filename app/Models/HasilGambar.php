@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class HasilGambar extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['source_file', 'nama'];
 }
