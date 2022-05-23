@@ -12,10 +12,20 @@
                 <form action="{{route('login')}}" method="POST" class="auth-form">
                     @csrf
                     <div class="form-group mb-3">
-                        <input type="text" name="email" id="username" class="form-control" placeholder="Username">
+                        <input type="text" name="email" id="username" class="form-control" placeholder="Email">
+                        @error('email')
+                        <div class="mt-2 alert alert-danger">
+                            {{ $message }}
+                        </div>
+                    @enderror
                     </div>
                     <div class="form-group mb-3">
                     <input type="password" name="password" id="userPassword" class="form-control" placeholder="Password">
+                    @error('password')
+                    <div class="mt-2 alert alert-danger">
+                        {{ $message }}
+                    </div>
+                @enderror
                     </div>
                     <button type="submit" class="login btn w-100 rounded-pill h-75 btn-primary btn-block mb-3">Log in</button>
                     <div class="d-md-flex justify-content-between">
