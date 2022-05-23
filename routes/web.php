@@ -69,6 +69,15 @@ use Illuminate\Support\Facades\Route;
         Route::get('/login', function(){
             return view('pages.auth.login');
         });
+
+        Route::get('/register', function(){
+            return view('pages.auth.register');
+        });
+
+        Route::get('/welcome', function(){
+            return view('pages.auth.welcome');
+        });
+
     });
 
 

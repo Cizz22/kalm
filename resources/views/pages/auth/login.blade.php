@@ -27,7 +27,8 @@
                         </div>
                         <a href="#" class="text-info">Forgot Password?</a>
                     </div>
-
+                    <br>
+                    <small> Don't Have an Account? <a href="#" class="text-info">Register?</a> </small>
                 </form>
             </div>
         </div>
