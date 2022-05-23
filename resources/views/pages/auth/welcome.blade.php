@@ -12,7 +12,8 @@
                 <p> Get your Inner Peace </p>
                 <form action="#" method="POST" class="auth-form">
                     @csrf
-                    <button type="submit" class="login btn w-100 rounded-pill h-75 btn-primary btn-block mb-3">Sign Up</button>
+                    <button type="submit" class="login btn w-100 rounded-pill h-75 btn-primary btn-block mb-3">Sign Up As Patient</button>
+                    <button type="submit" class="login btn w-100 rounded-pill h-75 btn-primary btn-block mb-3">Sign Up As Psychologist</button>
                 </form>
             </div>
         </div>

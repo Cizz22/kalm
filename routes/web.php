@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Authentication\LoginController;
 use App\Http\Controllers\Authentication\RegisterController;
+use App\Http\Controllers\Authentication\WelcomeController;
 use App\Http\Controllers\Konsultasi\KonsultasiController;
 use App\Http\Controllers\Landing\HomeController;
 use App\Http\Controllers\Landing\ProfileController;
@@ -21,6 +22,7 @@ use Illuminate\Support\Facades\Route;
 
     //General Feature
     Route::middleware('guest')->group(function () {
+        Route::get('/', [WelcomeController::class, 'index'])->name('welcome');
         Route::get('/login', [LoginController::class, 'index'])->name('login');
         Route::get('/register' , [RegisterController::class, 'index'])->name('register');
     });
