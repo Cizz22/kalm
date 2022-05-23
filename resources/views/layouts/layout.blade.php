@@ -35,8 +35,11 @@
                             class="nav_name">Files</span> </a> <a href="#" class="nav_link"> <i
                             class='bx bx-bar-chart-alt-2 nav_icon'></i> <span class="nav_name">Stats</span> </a>
                 </div>
-            </div> <a href="#" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span
-                    class="nav_name">SignOut</span> </a>
+            </div> <a class="nav_link" onclick="event.preventDefault(); document.getElementById('logout').submit();
+            "> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">SignOut</span> </a>
+
+            <form hidden action="{{ route('logout') }}" method="POST" id="logout">@csrf</form>
+
         </nav>
     </div>
     <!--Container Main start-->
