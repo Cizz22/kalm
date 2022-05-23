@@ -12,13 +12,23 @@
                 <form action="{{route('register')}}" method="POST" class="auth-form">
                     @csrf
                     <div class="form-group mb-3">
-                        <input type="text" name="nama" id="name" class="form-control" placeholder="Fullname">
+                        <input type="text" name="name" id="name" class="form-control" placeholder="Fullname">
                     </div>
                     <div class="form-group mb-3">
-                        <input type="text" name="email" id="username" class="form-control" placeholder="Username">
+                        <input type="text" name="email" id="username" class="form-control" placeholder="Email">
                     </div>
                     <div class="form-group mb-3">
                     <input type="password" name="password" id="userPassword" class="form-control" placeholder="Password">
+                    </div>
+                    <div class="form-group mb-3">
+                        <input type="password" name="password_confirmation" id="userPassword" class="form-control" placeholder="Password Confirmation">
+                        </div>
+                    <div class="form-group mb-3">
+                        <select placeholder="Daftar Sebagai" class="form-control" name="tipeakun">
+                            <option value="" selected disabled hidden>Sign up As</option>
+                            <option value="pengguna">Patient</option>
+                            <option value="pskolog">Psychologist</option>
+                        </select>
                     </div>
                     <button type="submit" class="login btn w-100 rounded-pill h-75 btn-primary btn-block mb-3">Sign Up</button>
                     <div class="d-md-flex justify-content-between">
