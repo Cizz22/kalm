@@ -24,7 +24,6 @@ use Illuminate\Support\Facades\Route;
     Route::middleware('guest')->group(function () {
         Route::get('/', [WelcomeController::class, 'index'])->name('welcome');
         Route::get('/login', [LoginController::class, 'index'])->name('login');
-
         Route::get('/register' , [RegisterController::class, 'index'])->name('register');
         Route::post('/register' , [RegisterController::class, 'register'])->name('register.post');
     });
