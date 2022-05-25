@@ -3,9 +3,11 @@
 use App\Http\Controllers\Authentication\LoginController;
 use App\Http\Controllers\Authentication\RegisterController;
 use App\Http\Controllers\Authentication\WelcomeController;
+use App\Http\Controllers\Jurnal\JurnalController;
 use App\Http\Controllers\Konsultasi\KonsultasiController;
 use App\Http\Controllers\Landing\HomeController;
 use App\Http\Controllers\Landing\ProfileController;
+use App\Models\Jurnal;
 use App\Models\Konsultasi;
 use Illuminate\Support\Facades\Route;
 
@@ -50,6 +52,10 @@ use Illuminate\Support\Facades\Route;
     });
 
     //Journaling
+    Route::middleware('auth')->group(function(){
+        Route::get('/jurnal', [JurnalController::class, 'index'])->name('jurnal.index');
+        Route::get('/jurnal/:slug', [JurnalController::class, 'jurnal'])->name('jurnal.open');
+    });
 
     //Meditate
 

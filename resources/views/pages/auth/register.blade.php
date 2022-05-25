@@ -55,6 +55,7 @@
                                 <div class="mt-2 alert alert-danger">
                                     {{ $message }}
                                 </div>
+                                @enderror
                             </div>
                             <button type="submit" class="login btn w-100 rounded-pill h-75 btn-primary btn-block mb-3">Sign
                                 Up</button>

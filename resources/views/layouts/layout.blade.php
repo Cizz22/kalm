@@ -43,7 +43,7 @@
         </nav>
     </div>
     <!--Container Main start-->
-    <div>
+    <div class="bg-light">
         @yield('content')
     </div>
     <!--Container Main end-->

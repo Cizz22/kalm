@@ -23,4 +23,10 @@ class JurnalController extends Controller
         $judul = $request->judul;
         $konten = $request->konten;
     }
+
+    public function jurnal($slug){
+        $jurnal = Jurnal::where('slug', $slug)->first();
+
+        return view('pages.jurnal.open');
+    }
 }
