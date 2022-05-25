@@ -10,11 +10,8 @@
             <div class="auth-form-section">
                 <h2 class="mb-3">Welcome to Kalm</h2>
                 <p> Get your Inner Peace </p>
-                <form action="#" method="POST" class="auth-form">
-                    @csrf
-                    <button type="submit" class="login btn w-100 rounded-pill h-75 btn-primary btn-block mb-3">Sign Up As Patient</button>
-                    <button type="submit" class="login btn w-100 rounded-pill h-75 btn-primary btn-block mb-3">Sign Up As Psychologist</button>
-                </form>
+                    <a href="{{route('register')}}"  class="login btn w-100 rounded-pill  btn-primary btn-block mb-3">Sign Up</a>
+                    <a href="{{route('login')}}" class="login btn w-100 rounded-pill btn-primary btn-block mb-3">Sign In</a>
             </div>
         </div>
     </div>

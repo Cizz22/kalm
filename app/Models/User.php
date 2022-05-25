@@ -56,4 +56,13 @@ class User extends Authenticatable
     public function jurnal() {
         $this->hasMany(Jurnal::class);
     }
+
+    public function getTipeAkunAttribute(){
+        if ($this->attributes['tipeakun'] == 'pengguna') {
+            return 'PATIENT';
+        }
+        elseif ($this->attributes['tipeakun'] == 'psikolog') {
+            return 'PSYCHOLOGIST';
+        }
+    }
 }
