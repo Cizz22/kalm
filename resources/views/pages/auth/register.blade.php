@@ -1,5 +1,6 @@
 @extends('layouts.auth')
 
+{{-- Hajdah Aleyda --}}
 @section('content')
     <div class="container-fluid">
         <div class="row vh-100">
@@ -45,9 +46,11 @@
                                 </div>
                             @enderror
                         </div>
-                        <div class="form-group mb-3">
+
+                        {{-- <div class="form-group mb-3">
                             <select placeholder="Daftar Sebagai" class="form-control" name="tipeakun">
-                                <option value="" selected disabled hidden>Sign up As</option>
+                                <option value="" selected disabled hidden><button class="btn btn-light dropdown-toggle form-control" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Sign up As</button></option>
                                 <option value="pengguna">Patient</option>
                                 <option value="pskolog">Psychologist</option>
                             </select>
@@ -56,10 +59,23 @@
                                     {{ $message }}
                                 </div>
                                 @enderror
+                            </div> --}}
+                            <div class="mb-3">
+                            <select placeholder="Daftar Sebagai" class="form-select" name="tipeakun" aria-label="Default select example">
+                                <option value="" selected disabled hidden>Sign up As</option>
+                                <option value="pengguna">Patient</option>
+                                <option value="psikolog">Psychologist</option>
+                              </select>
+                              @error('tipeakun')
+                                <div class="mt-2 alert alert-danger">
+                                    {{ $message }}
+                                </div>
                             </div>
-                            <button type="submit" class="login btn w-100 rounded-pill h-75 btn-primary btn-block mb-3">Sign
+                                @enderror
+                            </div>
+                            <button type="submit" class="login btn w-100 rounded-pill h-15 btn-primary btn-block mb-3">Sign
                                 Up</button>
-                            <div class="d-md-flex justify-content-between">
+                            <div class="d-md-flex justify-content-between mb-3">
                                 <div class="form-check">
                                     <input type="checkbox" class="form-check-input" name="termsAgriment" id="termsAgriment"
                                         value="termsAgreed">
@@ -67,11 +83,10 @@
                                         Remember Me
                                     </label>
                                 </div>
-                            </div>
-                            <br>
-                            <small> Already Have an Account? <a href="#" class="text-info">Log In?</a> </small>
+                                <br>
                         </form>
                     </div>
+                    <small> Already Have an Account? <a href="#" class="text-info">Log In?</a> </small>
                 </div>
             </div>
         </div>
