@@ -122,7 +122,7 @@ a {
     font-size: 1.25rem;
 }
 
-.show {
+.show-nav {
     left: 0;
 }
 
@@ -152,7 +152,6 @@ a {
         margin: calc(var(--header-height) + 1rem) 0 0 0;
         padding-left: calc(var(--nav-width));
         padding-right: -calc(var(--nav-width));
-
     }
     .header {
         height: calc(var(--header-height) + 1rem);
@@ -173,11 +172,14 @@ a {
         padding: 1rem 1rem 0 0;
     }
 
-    .show {
+    .show-nav {
         width: calc(var(--nav-width) + 156px);
     }
 
     .body-pd {
+        padding-left: calc(var(--nav-width) + 155px);
+    }
+    .header-pd {
         padding-left: calc(var(--nav-width) + 188px);
     }
 }
