@@ -1,11 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
-
 :root {
     --header-height: 3rem;
-    --nav-width: 68px;
-    --first-color: #4723d9;
-    --first-color-light: #afa5d9;
-    --white-color: #f7f6fb;
+    --nav-width: 70px;
+    --first-color: #ffffff;
+    --first-color-light: #747474;
+    --white-color: #a4a3ff;
     --body-font: "Nunito", sans-serif;
     --normal-font-size: 1rem;
     --z-fixed: 100;
@@ -157,25 +156,20 @@ a {
         height: calc(var(--header-height) + 1rem);
         padding: 0 2rem 0 calc(var(--nav-width) + 2rem);
     }
-
     .header_img {
         width: 40px;
         height: 40px;
     }
-
     .header_img img {
         width: 45px;
     }
-
     .l-navbar {
         left: 0;
         padding: 1rem 1rem 0 0;
     }
-
     .show-nav {
         width: calc(var(--nav-width) + 156px);
     }
-
     .body-pd {
         padding-left: calc(var(--nav-width) + 155px);
     }
