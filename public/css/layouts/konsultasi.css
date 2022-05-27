@@ -1,0 +1,61 @@
+.container-fluid {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.top-center {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mid-center {
+    text-align: left;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bottom-center {
+    text-align: left;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form-select {
+    border: solid #906f61 1px;
+    border-radius: 20px;
+    width: 700px;
+}
+
+.form-control {
+    border: solid #906f61 1px;
+    border-radius: 20px;
+    width: 500px;
+}
+
+label {
+    padding-left: 12px;
+}
+
+.btn {
+    background-color: #a4a3ff;
+    width: 700px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
