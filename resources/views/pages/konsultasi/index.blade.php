@@ -8,9 +8,7 @@
 <div class="flex-container">
     <!-- Background image -->
     <img src="{{ asset('img/all-bg.png') }}" alt="" style="width:100%;">
-    <h2 class="top-center">
-        <strong>Consultation</strong>
-    </h2>
+    <h2 class="top-center">Topik Konsultasi</h2>
 
     <!-- Schedule input -->
     <div class="mid-center mb-3">
@@ -25,19 +23,22 @@
         </select>
     </div>
 
-    <!-- Schedule input -->
-    <div class="centered mb-3">
-        <label for="date" class="form-label">Schedule</label>
-        <table class="table table-borderless">
-            <tr>
-                <td>
-                    <input type="date" class="form-control" id="datetimepicker2" />
-                </td>
-                <td>
-                    <input type="time" class="form-control" id="time" />
-                </td>
-            </tr>
-        </table>
+
+        <!-- Schedule input -->
+        <div class="mb-3">
+            <label for="date" class="col-1 col-form-label">Schedule</label>
+            <div class="col-12">
+                <div class="input-group date" id="datepicker">
+                    <input type="text" class="form-control" id="date" />
+                    <span class="input-group-append">
+                        <span class="input-group-text bg-light d-block">
+                            <i class="fa fa-calendar"></i>
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <!-- Next button -->

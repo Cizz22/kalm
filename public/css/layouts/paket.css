@@ -1,11 +1,8 @@
-/* by fidela nathania*/
-
-.flex-container {
-    display: flex;
-    flex-wrap: wrap;
+.container-fluid {
+    list-style: none;
     text-align: center;
-    padding: 0;
-    height: 100vh;
+    padding:0;
+    height: 100%;
     width: 100%;
 }
 
@@ -14,7 +11,7 @@
     top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-weight : bold;
+    font-weight: bold;
 }
 
 .mid-center {
@@ -23,38 +20,29 @@
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
-
-.centered {
-    text-align: left;
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    width: 700px;
+    margin-top: 90px;
 }
 
 .bottom-center {
     text-align: left;
     position: absolute;
-    top: 80%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
+    margin-top: 60px;
 }
 
 .form-select {
-    border: none;
+    border: solid #906f61 1px;
     border-radius: 20px;
-    background-color: #f5dfd3;
-    color: #606060;
     width: 700px;
 }
 
 .form-control {
-    border: none;
+    border: solid #906f61 1px;
     border-radius: 20px;
-    width: 340px;
-    background-color: #f5dfd3;
-    color: #606060;
+    width: 500px;
 }
 
 label {
@@ -75,20 +63,3 @@ label {
     margin: 4px 2px;
     cursor: pointer;
 }
-
-<<<<<<< HEAD
-
-
-=======
-form {
-    width: 800px;
-    height: 300px;
-    padding-right: 50px;
-    padding-left: 50px;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 1px 3px 3px #c4c4c47b;
-    background-color: white;
-    font-size: small;
-}
->>>>>>> dd8d68ce85e24fe0698a2308b51ddcb38ec86ee5
