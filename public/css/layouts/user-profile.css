@@ -1,3 +1,5 @@
+//Created by Muhammad Ridho Waradana 5026201084
+
 .nav-link {
     color: #495057;
 }
@@ -15,7 +17,7 @@
 }
 
 .font-white {
-    color: var(--white-color);
+    color: #fff;
 }
 
 .profile-picture {

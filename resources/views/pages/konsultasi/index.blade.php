@@ -1,13 +1,16 @@
-@extends('layouts.layout') @section('stylesheet')
-<link rel="stylesheet" href="{{ asset('css/layouts/konsultasi.css') }}"> @endsection @section('content')
-<!-- Background image -->
+@extends('layouts.layout')
+<!-- by fidela nathania -->
+@section('stylesheet')
+<link rel="stylesheet" href="{{ asset('css/layouts/konsultasi.css') }}"> @endsection
 
-<!-- <body> -->
-<div class="container-fluid">
+
+@section('content')
+<div class="flex-container">
+    <!-- Background image -->
     <img src="{{ asset('img/all-bg.png') }}" alt="" style="width:100%;">
     <h2 class="top-center">Topik Konsultasi</h2>
 
-    <!-- Topic input -->
+    <!-- Schedule input -->
     <div class="mid-center mb-3">
         <label class="form-label" for="topic">Topic</label>
         <select class="form-select">
@@ -18,6 +21,7 @@
             <option value="4">Self-growth</option>
             <option value="5">Healthy food</option>
         </select>
+    </div>
 
 
         <!-- Schedule input -->
@@ -36,23 +40,13 @@
         </div>
 
     </div>
+
     <!-- Next button -->
     <div class="bottom-center">
         <button type="submit" class="btn mb-3">
-            Next
+            NEXT
         </button>
     </div>
-    <!-- <div class="row d-flex justify-content-center">
-        <div class="col-md-6"> -->
-
-
-    <!-- </body> -->
-
-
-    <!-- Bootstrap datepicker CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" />
-
-    <!-- Bootstrap datepicker JS-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
-    <script src="{{ asset('js/app.js') }}"></script>
-    @endsection
+</div>
+<script src="{{ asset('js/app.js') }}"></script>
+@endsection

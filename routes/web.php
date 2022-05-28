@@ -5,6 +5,7 @@ use App\Http\Controllers\Authentication\RegisterController;
 use App\Http\Controllers\Authentication\WelcomeController;
 use App\Http\Controllers\Jurnal\JurnalController;
 use App\Http\Controllers\Konsultasi\KonsultasiController;
+use App\Http\Controllers\Meditasi\MeditasiController;
 use App\Http\Controllers\Landing\HomeController;
 use App\Http\Controllers\Landing\ProfileController;
 use App\Models\Jurnal;
@@ -57,12 +58,13 @@ use Illuminate\Support\Facades\Route;
         Route::get('/jurnal/:slug', [JurnalController::class, 'jurnal'])->name('jurnal.open');
     });
 
-    //Meditate
+    //Meditasi
+    Route::middleware('auth')->group(function(){
+        Route::get('/meditasi', [MeditasiController::class, 'index'])->name('meditasi.home');
+    });
 
 
-
-
-    //Testing (Kasil 'testing/' pas mau ngecek halaman, misal, localhost::3000/testing/home)
+    //Testing (Kasih 'testing/' pas mau ngecek halaman, misal, localhost::3000/testing/home)
     Route::prefix('testing')->group(function () {
         Route::get('/', function () {
             return view('layouts.layout');

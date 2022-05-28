@@ -125,7 +125,5 @@ class KonsultasiController extends Controller
 
     public function searchPsikolog(Request $request){
         $search = $request->search;
-
-
     }
 }

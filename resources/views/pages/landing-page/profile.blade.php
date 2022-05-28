@@ -1,3 +1,5 @@
+{{-- Created by Muhammad Ridho Waradana 5026201084 --}}
+
 @extends('layouts.layout')
 
 @section('stylesheet')
@@ -11,8 +13,8 @@
                 <img src="{{ asset('img/profile-bg.png') }}" class="img-fluid">
                 <div class="d-flex flex-column justify-content-center align-middle align-items-center profile-picture">
                     <img src="{{ asset('img/foto-profil.png') }}" alt="foto-profil" class="user-picture">
-                    <h3 class="font-white text-center mt-2">{{Auth::user()->name}}</h3>
-                    <p class="font-white text-center p-0 m-0">{{Auth::user()->tipeakun}}</p>
+                    {{-- <h3 class="font-white text-center mt-2">{{Auth::user()->name}}</h3> --}}
+                    {{-- <p class="font-white text-center p-0 m-0">{{Auth::user()->tipeakun}}</p> --}}
                     <small class="font-white text-center">18 y.o. woman with high spirit and motivation</small>
                 </div>
             </div>
