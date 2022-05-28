@@ -93,22 +93,24 @@ Route::prefix('testing')->group(function () {
         return view('pages.konsultasi.index');
     });
 
-<<<<<<< HEAD
+    Route::get('/konsultasi/psikolog', function(){
+        return view('pages.konsultasi.psikolog');
+    });
+    
     Route::get('/konsultasi/checkout', function () {
         return view('pages.konsultasi.checkout');
     });
 
-    Route::get('/meditasi', function () {
-        return view('pages.meditasi.index');
+    Route::get('/paket', function(){
+        return view('pages.konsultasi.paket');
     });
-=======
-        Route::get('/paket', function(){
-            return view('pages.konsultasi.paket');
-        });
->>>>>>> a1d541bb857e5a1427008e2057a9ae079d9b7ebc
-
+    
     Route::get('/konsultasi/video-call', function () {
         return view('pages.konsultasi.videocall');
+    });
+        
+    Route::get('/meditasi', function () {
+        return view('pages.meditasi.index');
     });
 });
 
