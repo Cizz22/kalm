@@ -96,7 +96,7 @@ Route::prefix('testing')->group(function () {
     Route::get('/konsultasi/psikolog', function(){
         return view('pages.konsultasi.psikolog');
     });
-    
+
     Route::get('/konsultasi/checkout', function () {
         return view('pages.konsultasi.checkout');
     });
