@@ -64,7 +64,7 @@ use Illuminate\Support\Facades\Route;
     });
 
 
-    //Testing (Kasil 'testing/' pas mau ngecek halaman, misal, localhost::3000/testing/home)
+    //Testing (Kasih 'testing/' pas mau ngecek halaman, misal, localhost::3000/testing/home)
     Route::prefix('testing')->group(function () {
         Route::get('/', function () {
             return view('layouts.layout');
@@ -91,6 +91,10 @@ use Illuminate\Support\Facades\Route;
 
         Route::get('/konsultasi', function(){
             return view('pages.konsultasi.index');
+        });
+
+        Route::get('/konsultasi/checkout', function(){
+            return view('pages.konsultasi.checkout');
         });
 
         Route::get('/meditasi', function(){

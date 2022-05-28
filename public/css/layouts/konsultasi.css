@@ -74,3 +74,15 @@ label {
     margin: 4px 2px;
     cursor: pointer;
 }
+
+form {
+    width: 800px;
+    height: 300px;
+    padding-right: 50px;
+    padding-left: 50px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 3px 3px #c4c4c47b;
+    background-color: white;
+    font-size: small;
+}

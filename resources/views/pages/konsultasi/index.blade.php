@@ -5,7 +5,6 @@
 
 
 @section('content')
-<!-- <body> -->
 <div class="flex-container">
     <!-- Background image -->
     <img src="{{ asset('img/all-bg.png') }}" alt="" style="width:100%;">
@@ -13,7 +12,7 @@
         <strong>Consultation</strong>
     </h2>
 
-    <!-- Topic input -->
+    <!-- Schedule input -->
     <div class="mid-center mb-3">
         <label class="form-label" for="topic">Topic</label>
         <select class="form-select">
@@ -24,9 +23,7 @@
             <option value="4">Self-growth</option>
             <option value="5">Healthy food</option>
         </select>
-
     </div>
-
 
     <!-- Schedule input -->
     <div class="centered mb-3">
@@ -43,11 +40,10 @@
         </table>
     </div>
 
-
     <!-- Next button -->
     <div class="bottom-center">
         <button type="submit" class="btn mb-3">
-            Next
+            NEXT
         </button>
     </div>
 </div>
