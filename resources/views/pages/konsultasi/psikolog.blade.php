@@ -26,7 +26,7 @@
                     <img src="{{ asset('img/psikolog-0.png') }}" alt="" style="width: 100px;">
                 </div>
                 <div class="col p-3 rounded" style="background-color:#E5D9D0;">
-                    <strong>Ani Suhandini S.Psi.</strong>
+                    <strong>Name</strong>
                     <p>Psychologist</p>
                 </div>
             </div>
@@ -37,7 +37,7 @@
                     <img src="{{ asset('img/psikolog-0.png') }}" alt="" style="width: 100px;">
                 </div>
                 <div class="col p-3 rounded" style="background-color:#E5D9D0;">
-                    <strong>Ani Suhandini S.Psi.</strong>
+                    <strong>Name</strong>
                     <p>Psychologist</p>
                 </div>
             </div>
@@ -49,10 +49,10 @@
         <div class="col-sm">
             <div class="row">
                 <div class="col-md-auto">
-                    <img src="{{ asset('img/psikolog-1.png') }}" alt="" style="width: 100px;">
+                    <img src="{{ asset('img/psikolog-0.png') }}" alt="" style="width: 100px;">
                 </div>
                 <div class="col p-3 rounded " style="background-color:#E5D9D0;">
-                    <strong>Ani Suhandini S.Psi.</strong>
+                    <strong>Name</strong>
                     <p>Psychologist</p>
                 </div>
             </div>
@@ -63,7 +63,7 @@
                     <img src="{{ asset('img/psikolog-0.png') }}" alt="" style="width: 100px;">
                 </div>
                 <div class="col p-3 rounded" style="background-color:#E5D9D0;">
-                    <strong>Ani Suhandini S.Psi.</strong>
+                    <strong>Name</strong>
                     <p>Psychologist</p>
                 </div>
             </div>
@@ -74,7 +74,7 @@
                     <img src="{{ asset('img/psikolog-0.png') }}" alt="" style="width: 100px;">
                 </div>
                 <div class="col p-3 rounded" style="background-color:#E5D9D0;">
-                    <strong>Ani Suhandini S.Psi.</strong>
+                    <strong>Name</strong>
                     <p>Psychologist</p>
                 </div>
             </div>
@@ -89,7 +89,7 @@
                     <img src="{{ asset('img/psikolog-1.png') }}" alt="" style="width: 100px;">
                 </div>
                 <div class="col p-3 rounded " style="background-color:#E5D9D0;">
-                    <strong>Ani Suhandini S.Psi.</strong>
+                    <strong>Name</strong>
                     <p>Psychologist</p>
                 </div>
             </div>
@@ -100,7 +100,7 @@
                     <img src="{{ asset('img/psikolog-0.png') }}" alt="" style="width: 100px;">
                 </div>
                 <div class="col p-3 rounded" style="background-color:#E5D9D0;">
-                    <strong>Ani Suhandini S.Psi.</strong>
+                    <strong>Name</strong>
                     <p>Psychologist</p>
                 </div>
             </div>
@@ -111,7 +111,7 @@
                     <img src="{{ asset('img/psikolog-0.png') }}" alt="" style="width: 100px;">
                 </div>
                 <div class="col p-3 rounded" style="background-color:#E5D9D0;">
-                    <strong>Ani Suhandini S.Psi.</strong>
+                    <strong>Name</strong>
                     <p>Psychologist</p>
                 </div>
             </div>
