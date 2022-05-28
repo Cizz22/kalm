@@ -22,19 +22,21 @@
     </header>
     <div class="l-navbar" id="nav-bar">
         <nav class="nav">
-            <div> <a href="#" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span class="nav_logo-name">KALM</span> </a>
+            <div>
+                <!--by fidela nathania-->
+                <a href="#" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span class="nav_logo-name">KALM</span> </a>
                 <div class="nav_list">
-                    <a href="#" class="nav_link active"> <i class='bx bxs-home nav_icon'></i>
+                    <a href="{{ route('landing.home') }}" class="nav_link active"> <i class='bx bxs-home nav_icon'></i>
                         <span class="nav_name">Home</span> </a>
                     <a href="#" class="nav_link"> <i class='bx bxs-book-open nav_icon'></i>
                         <span class="nav_name">Journaling</span> </a>
-                    <a href="#" class="nav_link"> <i class='bx bxs-group nav_icon'></i>
+                    <a href="{{ route('konsultasi.home') }}" class="nav_link"> <i class='bx bxs-group nav_icon'></i>
                         <span class="nav_name">Consulting</span> </a>
-                    <a href="#" class="nav_link"> <i class='bx bxs-leaf nav_icon'></i>
+                    <a href="{{ route('meditasi.home') }}" class="nav_link"> <i class='bx bxs-leaf nav_icon'></i>
                         <span class="nav_name">Meditate</span> </a>
-                    <a href="#" class="nav_link"> <i class='bx bxs-conversation nav_icon'></i>
+                    <a href="" class="nav_link"> <i class='bx bxs-conversation nav_icon'></i>
                         <span class="nav_name">Messages</span> </a>
-                    <a href="#" class="nav_link"> <i class='bx bx-user nav_icon'></i>
+                    <a href="{{ route('landing.profile') }}" class="nav_link"> <i class='bx bx-user nav_icon'></i>
                         <span class="nav_name">Me</span> </a>
                 </div>
             </div> <a class="nav_link" onclick="event.preventDefault(); document.getElementById('logout').submit();
