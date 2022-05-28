@@ -23,85 +23,88 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-    //General Feature
-    Route::middleware('guest')->group(function () {
-        Route::get('/', [WelcomeController::class, 'index'])->name('welcome');
-        Route::get('/login', [LoginController::class, 'index'])->name('login');
-        Route::get('/register' , [RegisterController::class, 'index'])->name('register');
-        Route::post('/register' , [RegisterController::class, 'register'])->name('register.post');
+//General Feature
+Route::middleware('guest')->group(function () {
+    Route::get('/', [WelcomeController::class, 'index'])->name('welcome');
+    Route::get('/login', [LoginController::class, 'index'])->name('login');
+    Route::get('/register', [RegisterController::class, 'index'])->name('register');
+    Route::post('/register', [RegisterController::class, 'register'])->name('register.post');
+});
+
+
+//Landing Page
+Route::middleware('auth')->group(function () {
+    Route::get('/home', [HomeController::class, 'index'])->name('landing.home');
+    Route::get('/profile', [ProfileController::class, 'index'])->name('landing.profile');
+});
+
+//Konsultasi
+Route::middleware('auth')->group(function () {
+    Route::get('/konsultasi', [KonsultasiController::class, 'index'])->name('konsultasi.home');
+    Route::post('/konsultasi', [KonsultasiController::class, 'postSchedule'])->name('konsultasi.schedule.post');
+
+    Route::get('/konsutalsi/psikolog', [KonsultasiController::class, 'psikolog'])->name('konsultasi.psikolog');
+    Route::post('/konsultasi/psikolog', [KonsultasiController::class, 'postPsikolog'])->name('konsultasi.psikolog.post');
+
+    Route::get('/konstulasi/paket', [KonsultasiController::class, 'paket'])->name('konsultasi.paket');
+    Route::post('/konsultasi/save', [KonsultasiController::class, 'postKonsultasi'])->name('konsultasi.post');
+
+    Route::get('konsultasi/checkout/:konsultasiId', [KonsultasiController::class, 'checkout'])->name('konsultasi.checkout');
+});
+
+//Journaling
+Route::middleware('auth')->group(function () {
+    Route::get('/jurnal', [JurnalController::class, 'index'])->name('jurnal.index');
+    Route::get('/jurnal/:slug', [JurnalController::class, 'jurnal'])->name('jurnal.open');
+});
+
+//Meditasi
+Route::middleware('auth')->group(function () {
+    Route::get('/meditasi', [MeditasiController::class, 'index'])->name('meditasi.home');
+});
+
+
+//Testing (Kasih 'testing/' pas mau ngecek halaman, misal, localhost::3000/testing/home)
+Route::prefix('testing')->group(function () {
+    Route::get('/', function () {
+        return view('pages.landing-page.index');
     });
 
-
-    //Landing Page
-    Route::middleware('auth')->group(function () {
-        Route::get('/home', [HomeController::class, 'index'])->name('landing.home');
-        Route::get('/profile' , [ProfileController::class, 'index'])->name('landing.profile');
+    Route::get('/home', function () {
+        return view('pages.landing-page.home');
     });
 
-    //Konsultasi
-    Route::middleware('auth')->group(function () {
-        Route::get('/konsultasi', [KonsultasiController::class, 'index'])->name('konsultasi.home');
-        Route::post('/konsultasi', [KonsultasiController::class, 'postSchedule'])->name('konsultasi.schedule.post');
-
-        Route::get('/konsutalsi/psikolog', [KonsultasiController::class, 'psikolog'])->name('konsultasi.psikolog');
-        Route::post('/konsultasi/psikolog', [KonsultasiController::class, 'postPsikolog'])->name('konsultasi.psikolog.post');
-
-        Route::get('/konstulasi/paket',[KonsultasiController::class,'paket'])->name('konsultasi.paket');
-        Route::post('/konsultasi/save', [KonsultasiController::class, 'postKonsultasi'])->name('konsultasi.post');
-
-        Route::get('konsultasi/checkout/:konsultasiId', [KonsultasiController::class,'checkout'])->name('konsultasi.checkout');
+    Route::get('/profile', function () {
+        return view('pages.landing-page.profile');
+    });
+    Route::get('/login', function () {
+        return view('pages.auth.login');
     });
 
-    //Journaling
-    Route::middleware('auth')->group(function(){
-        Route::get('/jurnal', [JurnalController::class, 'index'])->name('jurnal.index');
-        Route::get('/jurnal/:slug', [JurnalController::class, 'jurnal'])->name('jurnal.open');
+    Route::get('/register', function () {
+        return view('pages.auth.register');
     });
 
-    //Meditasi
-    Route::middleware('auth')->group(function(){
-        Route::get('/meditasi', [MeditasiController::class, 'index'])->name('meditasi.home');
+    Route::get('/welcome', function () {
+        return view('pages.auth.welcome');
     });
 
-
-    //Testing (Kasih 'testing/' pas mau ngecek halaman, misal, localhost::3000/testing/home)
-    Route::prefix('testing')->group(function () {
-        Route::get('/', function () {
-            return view('layouts.layout');
-        });
-
-        Route::get('/home', function () {
-            return view('pages.landing-page.home');
-        });
-
-        Route::get('/profile', function () {
-            return view('pages.landing-page.profile');
-        });
-        Route::get('/login', function(){
-            return view('pages.auth.login');
-        });
-
-        Route::get('/register', function(){
-            return view('pages.auth.register');
-        });
-
-        Route::get('/welcome', function(){
-            return view('pages.auth.welcome');
-        });
-
-        Route::get('/konsultasi', function(){
-            return view('pages.konsultasi.index');
-        });
-
-        Route::get('/konsultasi/checkout', function(){
-            return view('pages.konsultasi.checkout');
-        });
-
-        Route::get('/meditasi', function(){
-            return view('pages.meditasi.index');
-        });
-
+    Route::get('/konsultasi', function () {
+        return view('pages.konsultasi.index');
     });
+
+    Route::get('/konsultasi/checkout', function () {
+        return view('pages.konsultasi.checkout');
+    });
+
+    Route::get('/meditasi', function () {
+        return view('pages.meditasi.index');
+    });
+
+    Route::get('/konsultasi/video-call', function () {
+        return view('pages.konsultasi.videocall');
+    });
+});
 
 
 

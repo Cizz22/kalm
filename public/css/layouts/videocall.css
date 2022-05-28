@@ -1,0 +1,11 @@
+.hover {
+    transition: all ease 300ms;
+}
+
+.hover:hover {
+    transform: scale(1.05);
+}
+
+.video-control-btn:focus {
+    background-color: #fbf5eb;
+}
