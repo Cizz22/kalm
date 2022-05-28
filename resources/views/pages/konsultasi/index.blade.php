@@ -5,7 +5,7 @@
 <!-- <body> -->
 <div class="container-fluid">
     <img src="{{ asset('img/all-bg.png') }}" alt="" style="width:100%;">
-    <h2 class="top-center">Konsultasi</h2>
+    <h2 class="top-center">Topik Konsultasi</h2>
 
     <!-- Topic input -->
     <div class="mid-center mb-3">
@@ -23,7 +23,7 @@
         <!-- Schedule input -->
         <div class="mb-3">
             <label for="date" class="col-1 col-form-label">Schedule</label>
-            <div class="col-5">
+            <div class="col-12">
                 <div class="input-group date" id="datepicker">
                     <input type="text" class="form-control" id="date" />
                     <span class="input-group-append">

@@ -1,7 +1,7 @@
 .container-fluid {
     list-style: none;
     text-align: center;
-    padding: 0;
+    padding:0;
     height: 100%;
     width: 100%;
 }
@@ -11,7 +11,7 @@
     top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-weight : bold;
+    font-weight: bold;
 }
 
 .mid-center {
@@ -20,14 +20,17 @@
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 700px;
+    margin-top: 90px;
 }
 
 .bottom-center {
     text-align: left;
     position: absolute;
-    top: 80%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
+    margin-top: 60px;
 }
 
 .form-select {
@@ -60,6 +63,3 @@ label {
     margin: 4px 2px;
     cursor: pointer;
 }
-
-
-

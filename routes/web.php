@@ -86,9 +86,13 @@ use Illuminate\Support\Facades\Route;
         Route::get('/welcome', function(){
             return view('pages.auth.welcome');
         });
-        
+
         Route::get('/konsultasi', function(){
             return view('pages.konsultasi.index');
+        });
+
+        Route::get('/paket', function(){
+            return view('pages.konsultasi.paket');
         });
 
     });
