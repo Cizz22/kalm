@@ -112,7 +112,7 @@ Route::prefix('testing')->group(function () {
     Route::get('/meditasi', function () {
         return view('pages.meditasi.index');
     });
-    Route::get('/lagu', function () {
+    Route::get('/meditasi/lagu', function () {
         return view('pages.meditasi.open');
     });
 });
