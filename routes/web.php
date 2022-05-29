@@ -104,13 +104,16 @@ Route::prefix('testing')->group(function () {
     Route::get('/paket', function(){
         return view('pages.konsultasi.paket');
     });
-    
+
     Route::get('/konsultasi/video-call', function () {
         return view('pages.konsultasi.videocall');
     });
-        
+
     Route::get('/meditasi', function () {
         return view('pages.meditasi.index');
+    });
+    Route::get('/meditasi/lagu', function () {
+        return view('pages.meditasi.open');
     });
 });
 

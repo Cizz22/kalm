@@ -28,7 +28,7 @@
                 <div class="nav_list">
                     <a href="{{ route('landing.home') }}" class="nav_link active"> <i class='bx bxs-home nav_icon'></i>
                         <span class="nav_name">Home</span> </a>
-                    <a href="#" class="nav_link"> <i class='bx bxs-book-open nav_icon'></i>
+                    <a href="{{route('jurnal.index')}}" class="nav_link"> <i class='bx bxs-book-open nav_icon'></i>
                         <span class="nav_name">Journaling</span> </a>
                     <a href="{{ route('konsultasi.home') }}" class="nav_link"> <i class='bx bxs-group nav_icon'></i>
                         <span class="nav_name">Consulting</span> </a>
