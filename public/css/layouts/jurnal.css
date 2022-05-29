@@ -1,0 +1,24 @@
+.jurnal-book{
+    width: 140px;
+    height: 180px;
+}
+
+.item{
+    border-left:2px solid #8292E1;
+    padding-left: 15px;
+}
+
+.item i {
+    font-size: 50px;
+    color: grey;
+}
+
+.left{
+    background-color: #FBF5EB;
+}
+
+.right{
+    background-image: url('../../img/payment-bg.png');
+    background-size: cover;
+}
+
