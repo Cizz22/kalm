@@ -17,8 +17,9 @@
         <!-- Schedule input -->
     </div> --}}
 
+    <form>
     <div class="list-group mid-center mb-8 mt-10">
-        <a href="#" class="list-group-item list-group-item-action list-group-item-dark rounded-3 mb-2">
+        <a href="#" class="list-group-item list-group-item-action list-group-item-dark rounded-3 mb-2 active" data-bs-toggle ="list">
             <div class="fw-bold">Calm</div>
             <div class="d-flex w-100 justify-content-between">
                 <p class="mb-0">Total Consult Session : 1</p>
@@ -37,7 +38,7 @@
            {{-- Total Consult Session : 1 &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Rp280.000</p>
         </a>
         </div> --}}
-        <a href="#" class="list-group-item list-group-item-action list-group-item-dark rounded-3 mb-2">
+        <a href="#" class="list-group-item list-group-item-action list-group-item-dark rounded-3 mb-2" data-bs-toggle ="list">
             <div class="fw-bold">Relax</div>
             <div class="d-flex w-100 justify-content-between">
                 <p class="mb-0">Total Consult Session : 4</p>
@@ -49,7 +50,7 @@
             <span class="d-flex justify-content-between badge bg-primary rounded-pill">Rp.280.000</span>
             </div> --}}
             </a>
-            <a href="#" class="list-group-item list-group-item-action list-group-item-dark rounded-3 mb-2">
+            <a href="#" class="list-group-item list-group-item-action list-group-item-dark rounded-3 mb-2" data-bs-toggle ="list">
                 <div class="fw-bold">Peace</div>
                 <div class="d-flex w-100 justify-content-between">
                     <p class="mb-0">Total Consult Session : 12</p>
@@ -61,7 +62,7 @@
                 <span class="d-flex justify-content-between badge bg-primary rounded-pill">Rp.280.000</span>
                 </div> --}}
                 </a>
-                <a href="#" class="list-group-item list-group-item-action list-group-item-dark rounded-3 mb-2">
+                <a href="#" class="list-group-item list-group-item-action list-group-item-dark rounded-3 mb-2" data-bs-toggle ="list">
                     <div class="fw-bold">Serenity</div>
                     <div class="d-flex w-100 justify-content-between">
                         <p class="mb-0">Total Consult Session : 36</p>
@@ -74,6 +75,7 @@
                     </div> --}}
                     </a>
       </div>
+    </form>
 
     <!-- Next button -->
     <div class="bottom-center">
@@ -81,14 +83,6 @@
             Apply Package
         </button>
     </div>
-    <!-- <div class="row d-flex justify-content-center">
-        <div class="col-md-6"> -->
-
-
-    <!-- </body> -->
-
-
-    <!-- Bootstrap datepicker CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" />
 
     <!-- Bootstrap datepicker JS-->

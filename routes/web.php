@@ -84,6 +84,9 @@ Route::prefix('testing')->group(function () {
     Route::get('/register', function () {
         return view('pages.auth.register');
     });
+    Route::get('/forgot', function () {
+        return view('pages.auth.forgot');
+    });
 
     Route::get('/welcome', function () {
         return view('pages.auth.welcome');
@@ -101,7 +104,7 @@ Route::prefix('testing')->group(function () {
         return view('pages.konsultasi.checkout');
     });
 
-    Route::get('/paket', function(){
+    Route::get('/konsultasi/paket', function(){
         return view('pages.konsultasi.paket');
     });
 
