@@ -22,8 +22,8 @@ class KonsultasiController extends Controller
     public function index()
     {
         $topik = TopikKonsultasi::all();
-        $sesi = SesiKonsultasi::all();
-        return view('pages.konsultasi.index', compact(['topik', 'sesi']));
+        //$sesi = SesiKonsultasi::all();
+        return view('pages.konsultasi.index', compact(['topik']));
     }
 
     /**
@@ -35,7 +35,7 @@ class KonsultasiController extends Controller
     {
         $validate = $request->validate(([
             'topik_id' => 'required',
-            'sesi_id' => 'required'
+            'schedule' => 'required'
         ]));
 
         if (empty($request->session()->get('konsultasi'))) {
@@ -75,7 +75,7 @@ class KonsultasiController extends Controller
             $request->session()->put('konsultasi', $konsultasi);
         }
 
-        redirect()->route('konsultasi.paket');
+        return redirect()->route('konsultasi.paket');
     }
 
     public function paket()
