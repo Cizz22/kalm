@@ -75,7 +75,7 @@ class KonsultasiController extends Controller
             $request->session()->put('konsultasi', $konsultasi);
         }
 
-        redirect()->route('konsultasi.paket');
+        return redirect()->route('konsultasi.paket');
     }
 
     public function paket()

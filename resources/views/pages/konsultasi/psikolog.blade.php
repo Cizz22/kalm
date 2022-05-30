@@ -10,13 +10,25 @@
         }
 
         .btn-psikolog:focus{
+            box-shadow: 0 0 15px #000;
+            border: none;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+        }
 
+        .btn-psikolog {
+            text-align: left;
         }
 
     </style>
 @endsection
 @section('script')
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+    $('#button')
+</script>
 
 <!-- by Hasna Dhiya Nafitra -->
 @section('content')
@@ -28,10 +40,9 @@
 
         <form action="{{route('konsultasi.psikolog.post')}}" method="POST">
             @csrf
-        </form>
-        <div class="grid p-5">
+            <div class="grid p-5">
             @foreach ($psikolog as $p)
-            <button class="btn-psikolog" style="border: none" class="text-start" onclick="$('#psikolog-{{ $p->id }}').prop('checked',true)">
+            <button class="btn-psikolog" type="button" style="border: none" class="text-start" onclick="$('#psikolog-{{ $p->id }}').prop('checked',true)">
                 <div class="col-sm" >
                     <div class="row">
                         <div class="col-md-auto">
@@ -44,9 +55,16 @@
                     </div>
                 </div>
             </button>
-                <input type="radio" style="display:none; cursor: pointer;" name="psikolog" value="{{ $p->id }}" id="psikolog-{{ $p->id }}" />
+                <input type="radio" style="display:none; cursor: pointer;" name="psikolog_id" value="{{ $p->id }}" id="psikolog-{{ $p->id }}" />
             @endforeach
         </div>
+        <div class="d-flex justify-content-center ">
+            <button type="submit" class="btn mb-5 text-white btn-lg btn-block"
+                style="background-color: #a4a3ff; width:374px; border-radius: 38px">
+                NEXT
+            </button>
+        </div>
+        </form>
 
         <!-- Row 1 -->
         {{-- <div class="row justify-content-evenly p-5">
