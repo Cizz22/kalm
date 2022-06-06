@@ -61,6 +61,7 @@ Route::middleware('auth')->group(function () {
 //Meditasi
 Route::middleware('auth')->group(function () {
     Route::get('/meditasi', [MeditasiController::class, 'index'])->name('meditasi.home');
+    Route::get('/meditasi/lagu', [MeditasiController::class, 'open'])->name('meditasi.open');
 });
 
 
@@ -84,6 +85,9 @@ Route::prefix('testing')->group(function () {
     Route::get('/register', function () {
         return view('pages.auth.register');
     });
+    Route::get('/forgot', function () {
+        return view('pages.auth.forgot');
+    });
 
     Route::get('/welcome', function () {
         return view('pages.auth.welcome');
@@ -101,12 +105,16 @@ Route::prefix('testing')->group(function () {
         return view('pages.konsultasi.checkout');
     });
 
-    Route::get('/paket', function(){
+    Route::get('/konsultasi/paket', function(){
         return view('pages.konsultasi.paket');
     });
 
     Route::get('/konsultasi/video-call', function () {
         return view('pages.konsultasi.videocall');
+    });
+
+    Route::get('/jurnal', function () {
+        return view('pages.jurnal.index');
     });
 
     Route::get('/meditasi', function () {
