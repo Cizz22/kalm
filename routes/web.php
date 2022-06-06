@@ -112,6 +112,10 @@ Route::prefix('testing')->group(function () {
         return view('pages.konsultasi.videocall');
     });
 
+    Route::get('/jurnal', function () {
+        return view('pages.jurnal.index');
+    });
+
     Route::get('/meditasi', function () {
         return view('pages.meditasi.index');
     });

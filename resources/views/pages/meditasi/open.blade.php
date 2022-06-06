@@ -44,11 +44,17 @@
             <source src="https://hosseinghanbari.ir/other/music-player/autumn.mp3" type="audio/mp3">
         </audio>
         <span class="current-time">0:00</span><span class="duration">1:20</span>
-        <span class="player-control" onclick="handlePlay()">
-            <i class="material-icons">skip_previous</i>
-            <i class="material-icons">play_arrow</i>
-            <i class="material-icons">skip_next</i>
-        </span>
+        <div class ="d-flex justify-content-evenly" style="margin-top: 20px">
+            <span class="previous">
+                <i class="material-icons">skip_previous</i>
+            </span>
+            <span class="play" onclick="handlePlay()">
+                <i class="material-icons" >play_arrow</i>
+            </span>
+            <span class="next">
+                <i class="material-icons">skip_next</i>
+            </span>
+        </div>
     </div>
 </div>
 <script>
