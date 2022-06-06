@@ -7,16 +7,16 @@
 
 @section('content')
     <div class="container-fluid bg">
-        <h2 class="text-center my-3 pt-5">Meditation</h2>
+        <h2 class="text-center my-2 pt-4">Meditation</h2>
         <p class="text-center" style="color:#A0A3B1">
             We can learn how to recognize when our minds are doing their normal everyday acrobatics.
         </p>
         <div class="container">
             <div class="row">
-                <div class="meditation-btn-group mt-3">
+                <div class="meditation-btn-group my-1">
                     <ul class="nav nav-tabs justify-content-start flex-row m-0 p-0 gap-4" id="myTab" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <button class="btn  rounded-lg meditation-btn " data-bs-toggle="tab"
+                            <button class="btn  rounded-lg meditation-btn nav-link active" data-bs-toggle="tab"
                                 data-bs-target="#meditate-tab-1" type="button" role="tab"
                                 style="width:60px; height: 60px;"><i class="fa-solid fa-fan"></i></button>
                         </li>
@@ -54,11 +54,12 @@
                                     style="border-radius: 10px;">
                                     <div class="article-title px-2">
                                         <h3 class="mt-5 mx-3" style="color: #3F414E">Daily Calm</h3>
-                                        <h6 class="mx-3" style="color: #5A6175">April 30 &bull; PAUSE PRACTICE</h6>
+                                        <h6 class="mx-3" style="color: #5A6175">April 30 &bull; PAUSE PRACTICE
+                                        </h6>
                                     </div>
                                     <div class="align-items-center ">
-                                        <button class="btn play-btn" ><i
-                                                class="fa-solid fa-circle-play" style="font-size: 60px"></i></button>
+                                        <button class="btn play-btn"><i class="fa-solid fa-circle-play"
+                                                style="font-size: 60px"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -113,6 +114,12 @@
                 </div>
 
             </div>
+        </div>
+        <div class="d-flex justify-content-center ">
+            <button type="submit" class="btn mb-5 text-white btn-lg btn-block next-btn"
+                style="background-color: #a4a3ff; width:374px; border-radius: 38px">
+                NEXT
+            </button>
         </div>
     </div>
 @endsection

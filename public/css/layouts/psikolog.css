@@ -1,0 +1,40 @@
+/* by Hasna Dhiya Nafitra */
+.bg {
+    background-image: url("../../img/all-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:100%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-column-gap: 2rem;
+    grid-row-gap: 6rem;
+}
+
+.btn-psikolog:focus {
+    box-shadow: 0 0 40px rgb(139, 139, 139);
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.btn-psikolog {
+    text-align: left;
+}
+
+.next-btn:hover {
+    color: black !important;
+}
+
+.next-btn:focus {
+    color: black !important;
+    box-shadow: none;
+}
+
+.next-btn .active {
+    box-shadow: none;
+    color: black !important;
+}
