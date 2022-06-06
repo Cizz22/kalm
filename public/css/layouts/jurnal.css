@@ -19,6 +19,7 @@
 
 .right{
     background-image: url('../../img/payment-bg.png');
-    background-size: cover;
+    background-size: contain;
+    background-position-y: 48em;
 }
 
