@@ -23,6 +23,7 @@ body {
   position: absolute;
   left: 50%;
   top: 50%;
+  bottom: 30%;
   transform: translate(-50%, -50%);
   width: 330px;
   height: 530px;
@@ -31,6 +32,8 @@ body {
   box-shadow: 0 15px 20px 0 #c58371;
   margin-top: 30px;
   margin-left: 30px;
+  padding-top: 10px;
+
 }
 /* .player .player-control{
     min-height: 10vh;
