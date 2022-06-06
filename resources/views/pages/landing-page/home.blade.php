@@ -23,13 +23,14 @@
                 <div class="session mt-5">
                     <h2>Your Session</h2>
                     @forelse ($konsultasi as $k)
-                    <div class="lagu p-4">
-                        <h4 style="color: white;">Session</h4>
-                        <div class="d-flex flex-col align-items-center">
-                            <p class="p-0 m-0" style="color: white; font-size: 1.25rem;">{{$k->schedule}}</p>
-                            <a href="{{route('konsultasi.videocall', ['id' => $k->id])}}"><button type="button" class="btn btn-success start-btn hover">Start</button></a>
+                        <div class="lagu p-4">
+                            <h4 style="color: white;">Session</h4>
+                            <div class="d-flex flex-col align-items-center">
+                                <p class="p-0 m-0" style="color: white; font-size: 1.25rem;">{{ $k->schedule }}</p>
+                                <a href="{{ route('konsultasi.videocall', ['id' => $k->id]) }}"><button type="button"
+                                        class="btn btn-success start-btn hover">Start</button></a>
+                            </div>
                         </div>
-                    </div>
                     @empty
                         <h5>You don’t have any session. Make it one!</h5>
                     @endforelse
@@ -41,24 +42,24 @@
                     <div class="row ">
                         <div class="col">
                             <img class="image" src="{{ asset('img/home1.png') }}" alt="" srcset="">
-                            <h5>How to gain your happiness </h5>
+                            <h5 class="mt-2 mb-0">How to gain your happiness </h5>
                             <small>Article</small>
                         </div>
                         <div class="col">
                             <img class="image" src="{{ asset('img/home2.png') }}" alt="" srcset="">
-                            <h5>What is meditation?</h5>
+                            <h5 class="mt-2 mb-0">What is meditation?</h5>
                             <small>Article</small>
                         </div>
                     </div>
                     <div class="row mt-3">
                         <div class="col">
                             <img class="image" src="{{ asset('img/home3.png') }}" alt="" srcset="">
-                            <h5>Get Better Sleep 101</h5>
+                            <h5 class="mt-2 mb-0">Get Better Sleep 101</h5>
                             <small>Article</small>
                         </div>
                         <div class="col">
                             <img class="image" src="{{ asset('img/home4.png') }}" alt="" srcset="">
-                            <h5>Improve Performance</h5>
+                            <h5 class="mt-2 mb-0">Improve Performance</h5>
                             <small>Article</small>
 
                         </div>

@@ -9,6 +9,7 @@
     background-image: url("../../img/bg-music-landing.png");
     background-repeat: no-repeat;
     background-size: cover;
+    border-radius: 18px;
 }
 
 .play-btn {

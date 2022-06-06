@@ -94,7 +94,7 @@ class KonsultasiController extends Controller
         ]);
         $voucher = "";
 
-        if($request->voucher){
+        if ($request->voucher) {
             $voucher = $request->voucher;
         }
 
@@ -121,7 +121,8 @@ class KonsultasiController extends Controller
         return view('pages.konsultasi.checkout', compact('konsultasi'));
     }
 
-    public function savePsikologFavorit(Request $request){
+    public function saveFavPsychologist(Request $request)
+    {
         $psikolog = $request->all();
 
         PsikologFavorite::create([
@@ -130,7 +131,7 @@ class KonsultasiController extends Controller
         ]);
     }
 
-    public function searchPsikolog(Request $request){
-        $search = $request->search;
-    }
+    // public function searchPsycholog(Request $request){
+    //     $search = $request->search;
+    // }
 }

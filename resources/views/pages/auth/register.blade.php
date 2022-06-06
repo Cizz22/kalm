@@ -60,34 +60,35 @@
                                 </div>
                                 @enderror
                             </div> --}}
-                            <div class="mb-3">
-                            <select placeholder="Daftar Sebagai" class="form-select" name="tipeakun" aria-label="Default select example">
+                        <div class="mb-3">
+                            <select placeholder="Daftar Sebagai" class="form-select" name="tipeakun"
+                                aria-label="Default select example">
                                 <option value="" selected disabled hidden>Sign up As</option>
                                 <option value="pengguna">Patient</option>
                                 <option value="psikolog">Psychologist</option>
-                              </select>
-                              @error('tipeakun')
+                            </select>
+                            @error('tipeakun')
                                 <div class="mt-2 alert alert-danger">
                                     {{ $message }}
                                 </div>
                             </div>
-                                @enderror
-                            </div>
-                            <button type="submit" class="login btn w-100 rounded-pill h-15 btn-primary btn-block mb-3">Sign
-                                Up</button>
-                            <div class="d-md-flex justify-content-between mb-3">
-                                <div class="form-check">
-                                    <input type="checkbox" class="form-check-input" name="termsAgriment" id="termsAgriment"
-                                        value="termsAgreed">
-                                    <label class="form-check-label" for="termsAgriment">
-                                        Remember Me
-                                    </label>
-                                </div>
-                                <br>
-                        </form>
-                    </div>
-                    <small> Already Have an Account? <a href="#" class="text-info">Log In?</a> </small>
+                        @enderror
                 </div>
+                <button type="submit" class="login btn w-100 rounded-pill h-15 btn-primary btn-block mb-3">Sign
+                    Up</button>
+                <div class="d-md-flex justify-content-between mb-3">
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" name="termsAgriment" id="termsAgriment"
+                            value="termsAgreed">
+                        <label class="form-check-label" for="termsAgriment">
+                            Remember Me
+                        </label>
+                    </div>
+                    <br>
+                    </form>
+                </div>
+                <small> Already Have an Account? <a href="/login" class="text-info">Log In?</a> </small>
             </div>
         </div>
-    @endsection
+    </div>
+@endsection

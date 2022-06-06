@@ -5,7 +5,8 @@
 <head>
     <meta charset="UTF-8">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!--<title> Responsive Sidebar Menu  | CodingLab </title>-->
     <link rel="stylesheet" href="{{ asset('css/layouts/style.css') }}">
     @yield('stylesheet')
@@ -24,19 +25,25 @@
         <nav class="nav">
             <div>
                 <!--by fidela nathania-->
-                <a href="#" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span class="nav_logo-name">KALM</span> </a>
+                <a href="#" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span
+                        class="nav_logo-name">KALM</span> </a>
                 <div class="nav_list">
-                    <a href="{{ route('landing.home') }}" class="nav_link active"> <i class='bx bxs-home nav_icon'></i>
+                    <a href="{{ route('landing.home') }}" class="nav_link {{ Route::current() ? 'active' : null }}">
+                        <i class='bx bxs-home nav_icon'></i>
                         <span class="nav_name">Home</span> </a>
-                    <a href="{{route('jurnal.index')}}" class="nav_link"> <i class='bx bxs-book-open nav_icon'></i>
+                    <a href="{{ route('jurnal.index') }}" class="nav_link {{ Route::current() ? 'active' : null }}">
+                        <i class='bx bxs-book-open nav_icon'></i>
                         <span class="nav_name">Journaling</span> </a>
-                    <a href="{{ route('konsultasi.home') }}" class="nav_link"> <i class='bx bxs-group nav_icon'></i>
+                    <a href="{{ route('konsultasi.home') }}" class="nav_link"> <i
+                            class='bx bxs-group nav_icon'></i>
                         <span class="nav_name">Consulting</span> </a>
-                    <a href="{{ route('meditasi.home') }}" class="nav_link"> <i class='bx bxs-leaf nav_icon'></i>
+                    <a href="{{ route('meditasi.home') }}" class="nav_link"> <i
+                            class='bx bxs-leaf nav_icon'></i>
                         <span class="nav_name">Meditate</span> </a>
                     <a href="" class="nav_link"> <i class='bx bxs-conversation nav_icon'></i>
                         <span class="nav_name">Messages</span> </a>
-                    <a href="{{ route('landing.profile') }}" class="nav_link"> <i class='bx bx-user nav_icon'></i>
+                    <a href="{{ route('landing.profile') }}" class="nav_link"> <i
+                            class='bx bx-user nav_icon'></i>
                         <span class="nav_name">Me</span> </a>
                 </div>
             </div> <a class="nav_link" onclick="event.preventDefault(); document.getElementById('logout').submit();
@@ -51,7 +58,8 @@
         @yield('content')
     </div>
     <!--Container Main end-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
     @yield('script')
     <script src="{{ asset('js/layouts/main.js') }}"></script>

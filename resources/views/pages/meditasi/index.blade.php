@@ -97,7 +97,21 @@
                     </div>
                     <div class="tab-pane fade" id="meditate-tab-2" role="tabpanel" aria-labelledby="favourite-tab"
                         tabindex="0">
-                        <div class="row med-tab"></div>
+                        <div class="row med-tab">
+                            <div class="lagu p-4">
+                                <h4 style="color: white;">Focus Attention</h4>
+                                <div class="d-flex flex-col align-items-center">
+                                    <p class="p-0 m-0" style="color: white; font-size: 1.25rem;"> Currently Playing
+                                        <span class="ms-3">
+                                            &#9679;</span> <span class="ms-3">
+                                            3 - 10 min</span>
+                                    </p>
+
+                                    <button type="button" class="btn play-btn hover"><i class="fas fa-play-circle"
+                                            style="color: white;"></i></button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="tab-pane fade" id="meditate-tab-3" role="tabpanel" aria-labelledby="favourite-tab"
                         tabindex="0">
