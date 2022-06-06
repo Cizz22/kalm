@@ -35,7 +35,7 @@ class KonsultasiController extends Controller
     {
         $validate = $request->validate(([
             'topik_id' => 'required',
-            'schedule' => 'required'
+            'jadwal' => 'required'
         ]));
 
         if (empty($request->session()->get('konsultasi'))) {
@@ -91,19 +91,25 @@ class KonsultasiController extends Controller
         $request->validate([
             'paket_id' => 'required'
         ]);
+        $voucher = "";
 
-        $voucher = $request->voucher;
+        if($request->voucher){
+            $voucher = $request->voucher;
+        }
+
         $konsultasi = $request->session()->get('konsultasi');
+
 
         $userKonsultasi = Konsultasi::create([
             'user_id' => Auth::user()->id,
             'psikolog_id' => $konsultasi->psikolog_id,
-            'paket_id' => $konsultasi->paket_id,
+            'paket_id' => $request->paket_id,
             'topik_id' => $konsultasi->topik_id,
-            'sesi_id' => $konsultasi->sesi_id
+            'jadwal' => $konsultasi->jadwal
         ]);
 
-        redirect()->route('konsultasi.checkout', ['konsultasiId' => $userKonsultasi->id])->with('voucher', $voucher);
+
+        return redirect()->route('konsultasi.checkout', ['konsultasiId' => $userKonsultasi->id]);
     }
 
 

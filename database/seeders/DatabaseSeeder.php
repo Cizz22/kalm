@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\PaketKonsultasi;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -16,7 +17,8 @@ class DatabaseSeeder extends Seeder
         $this->call([
             AdminSeeder::class,
             TopikKonsultasiSeeder::class,
-            PsikologSeeder::class
+            PsikologSeeder::class,
+            PaketKonsultasiSeeder::class
         ]);
     }
 }

@@ -49,7 +49,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/konstulasi/paket', [KonsultasiController::class, 'paket'])->name('konsultasi.paket');
     Route::post('/konsultasi/save', [KonsultasiController::class, 'postKonsultasi'])->name('konsultasi.post');
 
-    Route::get('konsultasi/checkout/:konsultasiId', [KonsultasiController::class, 'checkout'])->name('konsultasi.checkout');
+    Route::get('konsultasi/checkout/{konsultasiId}', [KonsultasiController::class, 'checkout'])->name('konsultasi.checkout');
 });
 
 //Journaling

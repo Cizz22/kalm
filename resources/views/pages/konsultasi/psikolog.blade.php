@@ -25,11 +25,7 @@
 @endsection
 @section('script')
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-<script>
-    $('#button')
-</script>
-
+@endsection
 <!-- by Hasna Dhiya Nafitra -->
 @section('content')
     <!-- Background image -->
