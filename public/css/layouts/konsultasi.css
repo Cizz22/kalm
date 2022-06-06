@@ -76,7 +76,7 @@ label {
     cursor: pointer;
 }
 
-form {
+/* form {
     width: 800px;
     height: 300px;
     padding-right: 50px;
@@ -86,4 +86,4 @@ form {
     box-shadow: 1px 3px 3px #c4c4c47b;
     background-color: white;
     font-size: small;
-}
+} */

@@ -18,7 +18,7 @@
 </head>
 
 <div class="player">
-    <button type="button" class="btn-close" aria-label="Close"></button>
+    <a href="{{route('meditasi.home')}}"><button type="button" class="btn-close" aria-label="Close"></button></a>
     <div class="cover">
         <img src="https://hosseinghanbari.ir/other/music-player/autumn.jpg" alt="">
     </div>

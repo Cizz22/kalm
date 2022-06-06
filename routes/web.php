@@ -49,7 +49,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/konstulasi/paket', [KonsultasiController::class, 'paket'])->name('konsultasi.paket');
     Route::post('/konsultasi/save', [KonsultasiController::class, 'postKonsultasi'])->name('konsultasi.post');
 
-    Route::get('konsultasi/checkout/:konsultasiId', [KonsultasiController::class, 'checkout'])->name('konsultasi.checkout');
+    Route::get('konsultasi/checkout/{konsultasiId}', [KonsultasiController::class, 'checkout'])->name('konsultasi.checkout');
 });
 
 //Journaling
@@ -61,6 +61,7 @@ Route::middleware('auth')->group(function () {
 //Meditasi
 Route::middleware('auth')->group(function () {
     Route::get('/meditasi', [MeditasiController::class, 'index'])->name('meditasi.home');
+    Route::get('/meditasi/lagu', [MeditasiController::class, 'open'])->name('meditasi.open');
 });
 
 

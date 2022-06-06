@@ -14,7 +14,7 @@ class Konsultasi extends Model
         'psikolog_id',
         'paket_id',
         'topik_id',
-        'sesi_id'
+        'jadwal'
     ];
 
     public function user(){

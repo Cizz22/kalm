@@ -12,7 +12,11 @@
                 </div>
                 <div class="session mt-5">
                     <h2>Your Session</h2>
-                    <h5>You don’t have any session. Make it one!</h5>
+                    @forelse ($konsultasi as $k)
+
+                    @empty
+                        <h5>You don’t have any session. Make it one!</h5>
+                    @endforelse
                 </div>
             </div>
             <div class="col pt-5 mt-5 pb-4">

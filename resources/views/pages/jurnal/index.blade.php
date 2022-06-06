@@ -1,6 +1,14 @@
 @extends('layouts.layout')
 @section('stylesheet')
     <link rel="stylesheet" href="{{ asset('css/layouts/jurnal.css') }}">
+    <style>
+        .jurnal-body{
+            border-radius:50px 50px 0 0;
+            border: none;
+            height: 35em;
+            max-height: 100%;
+        }
+    </style>
 @endsection
 
 
@@ -60,8 +68,19 @@
             </div>
 
 
-            <div class="col-6 right m-0">
-                2
+            <div class="col-6 right m-0 p-0">
+                <div class="py-5 px-3 ml-3">
+                    <h3>Sunday</h3>
+                    <h4>Tanggal</h4>
+                </div>
+                <div class="mt-5 pt-5">
+                    <div class="card jurnal-body w-100" style="background-color: #F2F2F7">
+                        <div class="card-body p-5">
+                            <h2>Judul</h2>
+                            <p>Ut reprehenderit in commodo est nostrud incididunt duis dolor ut reprehenderit sint irure.</p>
+                        </div>
+                      </div>
+                </div>
             </div>
         </div>
     </div>
