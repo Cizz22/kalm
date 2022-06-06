@@ -134,7 +134,6 @@ a {
 }
 
 .active::before {
-    content: "";
     position: absolute;
     left: 0;
     width: 2px;
