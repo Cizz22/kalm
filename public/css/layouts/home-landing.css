@@ -1,24 +1,43 @@
-.lagu{
-     width: 100%;
-     height: 150px;
-     margin-top: 20px;
-    background-color: aqua;
-
+.btn:focus {
+    box-shadow: none;
 }
 
-.left{
+.lagu {
+    width: 100%;
+    height: 150px;
+    margin-top: 20px;
+    background-image: url("../../img/bg-music-landing.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.play-btn {
+    font-size: 48px;
+    margin-left: 4em;
+}
+
+.hover {
+    transition: all 300ms ease;
+}
+
+.hover:hover {
+    transform: scale(1.125);
+}
+
+.start-btn {
+    margin-left: 25em;
+}
+
+.left {
     margin-right: 106px;
     padding-left: 35px;
 }
 
-.image{
+.image {
     width: 250px;
     height: 200px;
 }
 
-h5{
-    color: #A1A4B2;
+h5 {
+    color: #a1a4b2;
 }
-
-
-
