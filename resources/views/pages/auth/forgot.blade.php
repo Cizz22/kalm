@@ -85,7 +85,7 @@
                                 <br>
                         </form>
                     </div>
-                    <small> Already Have an Account? <a href="#" class="text-info">Log In?</a> </small>
+                    {{-- <small> Already Have an Account? <a href="#" class="text-info">Log In?</a> </small> --}}
                 </div>
             </div>
         </div>

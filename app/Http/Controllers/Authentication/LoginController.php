@@ -11,4 +11,8 @@ class LoginController extends Controller
 
         return view('pages.auth.login');
     }
+    public function forgot(){
+
+        return view('pages.auth.forgot');
+    }
 }

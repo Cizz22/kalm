@@ -38,7 +38,7 @@
                                     Remember Me
                                 </label>
                             </div>
-                            <a href="/forgot" class="text-info">Forgot Password?</a>
+                            <a href="{{route('forgot')}}" class="text-info">Forgot Password?</a>
                         </div>
                         <br>
                         <small> Don't Have an Account? <a href="/register" class="text-info">Register?</a> </small>
