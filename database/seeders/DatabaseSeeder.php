@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\LaguMeditasiFavorite;
 use App\Models\PaketKonsultasi;
 use Illuminate\Database\Seeder;
 
@@ -18,7 +19,10 @@ class DatabaseSeeder extends Seeder
             AdminSeeder::class,
             TopikKonsultasiSeeder::class,
             PsikologSeeder::class,
-            PaketKonsultasiSeeder::class
+            PaketKonsultasiSeeder::class,
+            LaguSeeder::class,
+            PsikologFavoritSeeder::class,
+            LaguFavoritSeeder::class
         ]);
     }
 }
