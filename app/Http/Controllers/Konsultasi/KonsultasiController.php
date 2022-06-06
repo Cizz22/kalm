@@ -88,6 +88,7 @@ class KonsultasiController extends Controller
 
     public function postKonsultasi(Request $request)
     {
+
         $request->validate([
             'paket_id' => 'required'
         ]);

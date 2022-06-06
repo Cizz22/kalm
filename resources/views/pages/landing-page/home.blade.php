@@ -19,18 +19,17 @@
                                 style="color: white;"></i></button>
                     </div>
                 </div>
+
                 <div class="session mt-5">
                     <h2>Your Session</h2>
-                    <h5>You don't have any session. Make it one!</h5>
+                    @forelse ($konsultasi as $k)
                     <div class="lagu p-4">
                         <h4 style="color: white;">Session</h4>
                         <div class="d-flex flex-col align-items-center">
-                            <p class="p-0 m-0" style="color: white; font-size: 1.25rem;">31/12/9999</p>
-
-                            <button type="button" class="btn btn-success start-btn hover">Start</button>
+                            <p class="p-0 m-0" style="color: white; font-size: 1.25rem;">{{$k->schedule}}</p>
+                            <a href="{{route('konsultasi.videocall', ['id' => $k->id])}}"><button type="button" class="btn btn-success start-btn hover">Start</button></a>
                         </div>
                     </div>
-                    @forelse ($konsultasi as $k)
                     @empty
                         <h5>You don’t have any session. Make it one!</h5>
                     @endforelse

@@ -15,9 +15,8 @@
         <div class="row">
             <div class="col-8 justify-content-center">
                 <div class="ratio ratio-16x9">
-                    <iframe src="https://www.youtube.com/embed/EtZ2m2Zm3vY" title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
+                    <video-chat :psikologuser="{{ $psikolog }}" :authUserId="{{ Auth::id() }}" turn_url="{{ env('TURN_SERVER_URL') }}"
+                        turn_username="{{ env('TURN_SERVER_USERNAME') }}" turn_credential="{{ env('TURN_SERVER_CREDENTIAL') }}" />
                 </div>
             </div>
             <div class="col-4">
@@ -57,18 +56,6 @@
                         <textarea class="form-control" rows="2" placeholder="Type your message"></textarea>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="d-flex flex-row justify-content-center gap-4">
-                <button class="btn btn-light rounded-circle p-4 border border-dark video-control-btn" data-toggle="button"
-                    style="width: 75px; height:75px;"><i class="fa-solid fa-video"></i></button>
-                <button class="btn btn-light rounded-circle p-4 border border-dark video-control-btn"
-                    style="width: 75px; height:75px;"><i class="fa-solid fa-pen-to-square"></i></button>
-                <button class="btn btn-light rounded-circle p-4 border border-dark video-control-btn"
-                    style="width: 75px; height:75px;"><i class="fa-solid fa-microphone"></i></button>
-                <button class="btn btn-light rounded-circle p-4 border border-dark video-control-btn"
-                    style="width: 75px; height:75px;"><i class="fa-solid fa-comment"></i></button>
             </div>
         </div>
         <div class="row justify-content-center text-center my-4">

@@ -5,6 +5,7 @@ use App\Http\Controllers\Authentication\RegisterController;
 use App\Http\Controllers\Authentication\WelcomeController;
 use App\Http\Controllers\Jurnal\JurnalController;
 use App\Http\Controllers\Konsultasi\KonsultasiController;
+use App\Http\Controllers\Konsultasi\VideoCallController;
 use App\Http\Controllers\Meditasi\MeditasiController;
 use App\Http\Controllers\Landing\HomeController;
 use App\Http\Controllers\Landing\ProfileController;
@@ -50,6 +51,10 @@ Route::middleware('auth')->group(function () {
     Route::post('/konsultasi/save', [KonsultasiController::class, 'postKonsultasi'])->name('konsultasi.post');
 
     Route::get('konsultasi/checkout/{konsultasiId}', [KonsultasiController::class, 'checkout'])->name('konsultasi.checkout');
+
+    Route::get('/konsultasi/videocall/{id}', [VideoCallController::class, 'index'])->name('konsultasi.videocall');
+    Route::post('/video/call-user', 'App\Http\Controllers\VideoChatController@callUser');
+    Route::post('/video/accept-call', 'App\Http\Controllers\VideoChatController@acceptCall');
 });
 
 //Journaling

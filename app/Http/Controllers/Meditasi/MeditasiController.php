@@ -13,6 +13,7 @@ use App\Models\User;
 class MeditasiController extends Controller
 {
     public function index(){
+
         return view('pages.meditasi.index');
     }
     public function open(){
