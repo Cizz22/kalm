@@ -73,21 +73,32 @@
                                 </div>
                             </div>
                         @enderror
-                </div>
-                <button type="submit" class="login btn w-100 rounded-pill h-15 btn-primary btn-block mb-3">Sign
-                    Up</button>
-                <div class="d-md-flex justify-content-between mb-3">
+                        <button type="submit" class ="btn w-100 rounded-pill h-15 btn-primary btn-block mb-3 mt-3">Sign Up</button>
+                        <br>
+                        <div class="d-md-flex justify-content-between mb-3">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" name="termsAgriment" id="termsAgriment"
+                                    value="termsAgreed">
+                                <label class="form-check-label" for="termsAgriment">
+                                    Remember Me
+                                </label>
+                            </div>
+                        </div>
+                        <small> Already Have an Account? <a href="/login" class="text-info">Log In?</a> </small>
+                {{-- <button type="submit" class ="btn w-100 rounded-pill h-15 btn-primary btn-block mb-3">Sign Up</button> --}}
+
+                {{-- <div class="d-md-flex justify-content-between mb-3">
                     <div class="form-check">
                         <input type="checkbox" class="form-check-input" name="termsAgriment" id="termsAgriment"
                             value="termsAgreed">
                         <label class="form-check-label" for="termsAgriment">
                             Remember Me
                         </label>
-                    </div>
+                    </div> --}}
                     <br>
                     </form>
                 </div>
-                <small> Already Have an Account? <a href="/login" class="text-info">Log In?</a> </small>
+                {{-- <small> Already Have an Account? <a href="/login" class="text-info">Log In?</a> </small> --}}
             </div>
         </div>
     </div>
