@@ -30,6 +30,10 @@
                             <button type="button" class="btn btn-success start-btn hover">Start</button>
                         </div>
                     </div>
+                    @forelse ($konsultasi as $k)
+                    @empty
+                        <h5>You don’t have any session. Make it one!</h5>
+                    @endforelse
                 </div>
             </div>
             <div class="col pt-5 mt-5 pb-4">

@@ -15,9 +15,6 @@ class JurnalController extends Controller
         return view('pages.jurnal.index', compact(['jurnalAll', 'jurnal']));
     }
 
-    public function search(Request $request){
-        $searchResult = $request->search;
-    }
 
     public function save(Request $request){
         $judul = $request->judul;

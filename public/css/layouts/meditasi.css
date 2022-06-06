@@ -1,18 +1,65 @@
+/* by Hasna Dhiya Nafitra */
+
+.bg {
+    background-image: url("../../img/meditate-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.nav-tabs {
+    border-bottom: none;
+}
+
 .meditation-btn-group {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly;
-
 }
 
 .meditation-btn {
     background-color:#A0A3B1;
     border-radius: 15px;
+    border: none;
+    color: white;
+    transition-duration: 0.2s;
 }
 
-.hover{
+.meditation-btn:hover{
     background-color:#8E97FD;
+    color: white;
+}
+
+.meditation-btn:focus {
+    background-color:#8E97FD;
+    color: white;
+    box-shadow: none;
+}
+
+.meditate-article0 {
+    background-image: url("../../img/meditate\ 0.png");
+    background-repeat: no-repeat;
+    height: 365px;
+    max-width: 374px;
+    color: #3F414E;
+}
+
+.btn{
+    transition: none;
+}
+.btn:focus {
+    box-shadow: none;
+}
+
+.play-btn {
+    margin-left: 130px;
+    margin-top: 60px;
+    border-radius: 50%;
+    width:60px;
+    height: 60px;
+}
+
+.play-btn:focus {
+    border: none;
 }
 
 .meditate-article1 {
@@ -50,6 +97,6 @@
     margin-top: 30px;
 }
 
-.med-page-1 {
+.med-tab {
     padding: 30px;
 }

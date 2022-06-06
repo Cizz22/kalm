@@ -15,4 +15,7 @@ class MeditasiController extends Controller
     public function index(){
         return view('pages.meditasi.index');
     }
+    public function open(){
+        return view('pages.meditasi.open');
+    }
 }
