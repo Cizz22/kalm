@@ -1,3 +1,11 @@
+.meditation-btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+
 .meditation-btn {
     background-color:#A0A3B1;
     border-radius: 15px;
@@ -5,4 +13,43 @@
 
 .hover{
     background-color:#8E97FD;
+}
+
+.meditate-article1 {
+    background-image: url("../../img/meditate\ 1.png");
+    background-repeat: no-repeat;
+    height: 165px;
+    max-width: 449px;
+    color: white;
+}
+
+.meditate-article2 {
+    background-image: url("../../img/meditate\ 2.png");
+    /* background-repeat:no-repeat; */
+    height: 165px;
+    max-width: 449px;
+    color: white;
+    margin-top: 30px;
+
+}
+
+.meditate-article3 {
+    background-image: url("../../img/meditate\ 3.png");
+    background-repeat: no-repeat;
+    height: 165px;
+    max-width: 232px;
+    color: white;
+}
+
+.meditate-article4 {
+    background-image: url("../../img/meditate\ 4.png");
+    background-repeat: no-repeat;
+    height: 165px;
+    max-width: 232px;
+    color: white;
+    margin-top: 30px;
+}
+
+.med-page-1 {
+    padding: 30px;
 }
