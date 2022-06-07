@@ -93,7 +93,7 @@
                 timer: 1500
             })
             .then(() => {
-                window.location.replace = "http://127.0.0.1/home"
+                window.location = "http://127.0.0.1:8000/home"
             })
     }
 </script>
