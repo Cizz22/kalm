@@ -29,10 +29,10 @@
                             <p><i class="fa-solid fa-heart" style="color: #FF84A2;"></i> 10 Favourites</p>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col mt-2">
-                        <h4>Kezia's Favourite</h4>
+                    <div class="row">
+                        <div class="col mt-2">
+                            <h4>{{ Auth::user()->name }}'s Favourite</h4>
+                        </div>
                     </div>
                 </div>
                 <div class="row">
@@ -73,6 +73,22 @@
                                 </li>
                             </ul>
                         </div>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="ambient-tab-pane" role="tabpanel"
+                                aria-labelledby="ambient-tab" tabindex="0">
+                                <ul class="list-group list-group-flush">
+                                    @foreach ($favouriteSong as $f)
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <span><i class="fa-solid fa-circle-play" style="color: #8E97FD"></i>
+                                                <div class="d-inline-flex flex-column">
+                                                    {{ $f->lagu->judul }}
+                                                    <small class="light-grey">10 min</small>
+                                                </div>
+                                            </span>
+                                            <span class="badge"><i class="fa-solid fa-heart"
+                                                    style="color: #FF84A2;"></i></span>
+                                        </li>
+                                    @endforeach
 
                         <div class="tab-pane fade" id="psychologists-tab-pane" role="tabpanel" aria-labelledby="psychologists-tab" tabindex="0">
                             <ul class="list-group list-group-flush">
@@ -87,16 +103,46 @@
                                 </li>
                                 @endforeach
 
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    <span><i class="fa-solid fa-circle-play light-grey"></i>
-                                        <div class="d-inline-flex flex-column">
-                                            Johnny Depp
-                                            <small class="light-grey">5 min</small>
-                                        </div>
-                                    </span>
-                                    <span class="badge"><i class="fa-solid fa-heart" style="color: #FF84A2;"></i></span>
-                                </li>
-                            </ul>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <span><i class="fa-solid fa-circle-play light-grey"></i>
+                                            <div class="d-inline-flex flex-column">
+                                                Body Scan
+                                                <small class="light-grey">5 min</small>
+                                            </div>
+                                        </span>
+                                        <span class="badge"><i class="fa-solid fa-heart"
+                                                style="color: #FF84A2;"></i></span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="tab-pane fade" id="psychologists-tab-pane" role="tabpanel"
+                                aria-labelledby="psychologists-tab" tabindex="0">
+                                <ul class="list-group list-group-flush">
+                                    @foreach ($psikolog as $p)
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <span><i class="fa-solid fa-circle-play" style="color: #8E97FD"></i>
+                                                <div class="d-inline-flex flex-column">
+                                                    {{ $p->name }}
+                                                </div>
+                                            </span>
+                                            <span class="badge"><i class="fa-solid fa-heart"
+                                                    style="color: #FF84A2;"></i></span>
+                                        </li>
+                                    @endforeach
+
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <span><i class="fa-solid fa-circle-play light-grey"></i>
+                                            <div class="d-inline-flex flex-column">
+                                                Johnny Depp
+                                                <small class="light-grey">5 min</small>
+                                            </div>
+                                        </span>
+                                        <span class="badge"><i class="fa-solid fa-heart"
+                                                style="color: #FF84A2;"></i></span>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -97,8 +97,7 @@ a {
 }
 
 .nav_logo-icon {
-    font-size: 1.25rem;
-    color: var(--white-color);
+    max-height: 1.1em;
 }
 
 .nav_logo-name {

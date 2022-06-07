@@ -102,14 +102,17 @@
                             <div class="lagu p-4">
                                 <h4 style="color: white;"> {{$l -> judul}}</h4>
                                 <div class="d-flex flex-col align-items-center">
-                                    <p class="p-0 m-0" style="color: white; font-size: 1.25rem;"> Currently Playing
-                                        <span class="ms-3">
-                                            &#9679;</span> <span class="ms-3">
-                                            3 - 10 min</span>
+                                    <p class="py-0 pe-5 m-0" style="color: white; font-size: 1.25rem;"> Currently Playing
+                                        {{-- <span class="ms-3">
+                                            &#9679;</span> <span class="ms-3"> --}}
+                                            &bull; 3 - 10 min
+                                        {{-- </span> --}}
                                     </p>
 
-                                    <button type="button" class="btn play-btn hover"><i class="fas fa-play-circle"
-                                            style="color: white;"></i></button>
+                                    {{-- <a href = "{{route('meditasi.open')}}"><button type="button" class="btn play-btn hover"><i class="fas fa-play-circle"
+                                            style="color: white;"></i></button></a> --}}
+                                            <a href = "#"><button type="button" class="btn play-btn hover"><i class="fas fa-play-circle"
+                                                style="color: white;"></i></button></a>
                                 </div>
                             </div>
                         </div>
@@ -137,8 +140,7 @@
             </div>
         </div>
         <div class="d-flex justify-content-center ">
-            <button type="submit" class="btn mb-5 text-white btn-lg btn-block next-btn"
-                style="background-color: #a4a3ff; width:374px; border-radius: 38px">
+            <button type="submit" class="btn mb-5 text-white btn-lg btn-block next-btn">
                 NEXT
             </button>
         </div>
