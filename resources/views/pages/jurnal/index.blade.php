@@ -5,7 +5,7 @@
         .jurnal-body{
             border-radius:50px 50px 0 0;
             border: none;
-            height: 35em;
+            height: 20em;
             max-height: 100%;
         }
     </style>
@@ -77,7 +77,7 @@
                     <div class="card jurnal-body w-100" style="background-color: #F2F2F7">
                         <div class="card-body p-5">
                             <h2>Judul</h2>
-                            <p>Ut reprehenderit in commodo est nostrud incididunt duis dolor ut reprehenderit sint irure.</p>
+                            <p>Halo, nama saya Kezia Cantique. Wish u all the best</p>
                         </div>
                       </div>
                 </div>
