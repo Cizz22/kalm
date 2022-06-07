@@ -11,20 +11,20 @@
 
 @section('content')
     <div class="container-fluid bg">
-        <h2 class="text-center py-3">Choose Psychologist</h2>
+        <h2 class="text-center py-5">Choose Psychologist</h2>
 
         <form action="{{ route('konsultasi.psikolog.post') }}" method="POST">
             @csrf
-            <div class="grid p-5">
+            <div class="grid px-5">
                 @foreach ($psikolog as $p)
-                    <button class="btn-psikolog" type="button" style="border: none;" class="text-start"
+                    <button class="btn btn-psikolog p-0" type="button" style="border: none;" class="text-start"
                         onclick="$('#psikolog-{{ $p->id }}').prop('checked',true)">
-                        <div class="col-sm">
+                        <div class="container-fluid">
                             <div class="row">
-                                <div class="col-md-auto">
-                                    <img src="{{ asset('img/psikolog-1.png') }}" alt="" style="width: 100px;">
+                                <div class="col-md-auto p-0 ">
+                                    <img src="{{ asset('img/psikolog-1.png') }}" alt="" class="psy-img">
                                 </div>
-                                <div class="col p-3 rounded" style="background-color:#E5D9D0;">
+                                <div class="col p-3 box-name" style="background-color:#E5D9D0;">
                                     <strong>{{ $p->name }}</strong>
                                     <p>Psychologist</p>
                                 </div>
@@ -35,8 +35,8 @@
                         value="{{ $p->id }}" id="psikolog-{{ $p->id }}" />
                 @endforeach
             </div>
-            <div class="d-flex justify-content-center ">
-                <button type="submit" class="btn mb-5 text-white btn-lg btn-block next-btn active"
+            <div class="d-flex justify-content-center py-5">
+                <button type="submit" class="btn mx-5 text-white btn-lg btn-block next-btn active"
                     style="background-color: #a4a3ff; width:374px; border-radius: 38px;">
                     NEXT
                 </button>

@@ -17,57 +17,57 @@ class PsikologSeeder extends Seeder
     {
         User::insert([
             [
-            'name' => 'Psikolog 1',
-            'email' => 'psikolog1@gmail.com',
+            'name' => 'Ani Suhandini S.Psi.',
+            'email' => 'anidini@gmail.com',
             'password' => Hash::make('password'),
             'tipeakun' => 'psikolog'
             ],
             [
-                'name' => 'Psikolog 2',
-                'email' => 'psikolog2@gmail.com',
+                'name' => 'Gandi Haryanto, S.Psi',
+                'email' => 'gandiharyanto@gmail.com',
                 'password' => Hash::make('password'),
                 'tipeakun' => 'psikolog'
                 ],
 
                 [
-                    'name' => 'Psikolog 3',
-                    'email' => 'psikolog3@gmail.com',
+                    'name' => 'Raina Yuniar, S.Psi',
+                    'email' => 'rainayuniar@gmail.com',
                     'password' => Hash::make('password'),
                     'tipeakun' => 'psikolog'
                     ],
                     [
-                        'name' => 'Psikolog 4',
-                        'email' => 'psikolog4@gmail.com',
+                        'name' => 'Rheza Andrawida, S.Psi',
+                        'email' => 'rhezaandra@gmail.com',
                         'password' => Hash::make('password'),
                         'tipeakun' => 'psikolog'
                         ],
                         [
-                            'name' => 'Psikolog 5',
-                            'email' => 'psikolog5@gmail.com',
+                            'name' => 'Fariz Prayugo, S.Psi',
+                            'email' => 'farizp@gmail.com',
                             'password' => Hash::make('password'),
                             'tipeakun' => 'psikolog'
                             ],
                             [
-                                'name' => 'Psikolog 6',
-                                'email' => 'psikolog6@gmail.com',
+                                'name' => 'Fitra Hartina, S.Psi',
+                                'email' => 'fitrahartina@gmail.com',
                                 'password' => Hash::make('password'),
                                 'tipeakun' => 'psikolog'
                                 ],
                                 [
-                                    'name' => 'Psikolog 7',
-                                    'email' => 'psikolog7@gmail.com',
+                                    'name' => 'Syahdian Sari, S.Psi',
+                                    'email' => 'syahdiansari@gmail.com',
                                     'password' => Hash::make('password'),
                                     'tipeakun' => 'psikolog'
                                     ],
                                     [
-                                        'name' => 'Psikolog 8',
-                                        'email' => 'psikolog8@gmail.com',
+                                        'name' => 'Ana Mayasari',
+                                        'email' => 'anamayasari@gmail.com',
                                         'password' => Hash::make('password'),
                                         'tipeakun' => 'psikolog'
                                         ],
                                         [
-                                            'name' => 'Psikolog 9',
-                                            'email' => 'psikolog9@gmail.com',
+                                            'name' => 'Dalima Fujiati',
+                                            'email' => 'dalimafuji@gmail.com',
                                             'password' => Hash::make('password'),
                                             'tipeakun' => 'psikolog'
                                             ],

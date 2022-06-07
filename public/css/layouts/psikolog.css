@@ -3,14 +3,14 @@
     background-image: url("../../img/all-bg.png");
     background-repeat: no-repeat;
     background-size: cover;
-    width:100%;
+    width: 100%;
 }
 
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     grid-column-gap: 2rem;
-    grid-row-gap: 6rem;
+    grid-row-gap: 4rem;
 }
 
 .btn-psikolog:focus {
@@ -19,10 +19,21 @@
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
+    border-radius: 16px;
 }
 
 .btn-psikolog {
     text-align: left;
+}
+
+.box-name{
+    border-radius: 0 10px 10px 0;
+
+}
+
+.psy-img {
+    border-radius: 10px 0 0 10px;
+    width: 100px;
 }
 
 .next-btn:hover {

@@ -17,35 +17,34 @@
             <select class="form-select" name="topik_id">
                 <option value="" selected disabled hidden>Choose Your Topic</option>
                 @foreach ($topik as $t)
-                    <option value="{{$t->id}}">{{$t->nama}}</option>
+                <option value="{{$t->id}}">{{$t->nama}}</option>
                 @endforeach
             </select>
 
-                <!-- Schedule input -->
-                <div class="my-3 ">
-                    <label for="date" class="col-1 col-form-label">Schedule</label>
-                    <div class="col-12">
-                        <div class="input-group date" id="datepicker">
-                            <input type="date" name="jadwal" class="form-control" id="date" />
-                            {{-- <span class="input-group-append">
+            <!-- Schedule input -->
+            <div class="my-3 ">
+                <label for="date" class="col-1 col-form-label">Schedule</label>
+                <div class="col-12">
+                    <div class="input-group date" id="datepicker">
+                        <input type="date" name="jadwal" class="form-control" id="date" />
+                        {{-- <span class="input-group-append">
                                 <span class="input-group-text bg-light d-block">
                                     <i class="fa fa-calendar"></i>
                                 </span>
                             </span> --}}
-                        </div>
                     </div>
                 </div>
+            </div>
         </div>
 
-    </div>
 
-    <!-- Next button -->
-    <div class="bottom-center">
-        <button type="submit" class="btn mb-3">
-            NEXT
-        </button>
-    </div>
-</form>
+        <!-- Next button -->
+        <div class="bottom-center">
+            <button type="submit" class="btn mb-3">
+                NEXT
+            </button>
+        </div>
+    </form>
 </div>
 <script src="{{ asset('js/app.js') }}"></script>
 @endsection
