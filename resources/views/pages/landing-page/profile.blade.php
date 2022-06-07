@@ -148,6 +148,7 @@
                 </div>
             </div>
         </div>
+        </div>
 
         <div class="col-6 mt-4">
             <h4>Completed Courses</h4>
@@ -187,5 +188,6 @@
             </div>
         </div>
     </div>
+</div>
 </div>
 @endsection

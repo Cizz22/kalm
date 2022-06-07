@@ -1,4 +1,4 @@
-//Created by Muhammad Ridho Waradana 5026201084
+/* //Created by Muhammad Ridho Waradana 5026201084 */
 .nav-link {
     color: #495057;
 }
@@ -23,9 +23,9 @@
 
 .profile-picture {
     position: absolute;
-    top: 6em;
-    right: 39vw;
-    width: 250px;
+    top: 4em;
+    right: 35vw;
+    width: 300px;
 }
 
 .user-picture {
