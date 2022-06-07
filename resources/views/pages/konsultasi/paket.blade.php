@@ -42,7 +42,7 @@
       </div>
       <div class="bottom-center">
         <button type="submit" class="btn">
-            Apply Package
+            APPLY PACKAGE
         </button>
     </div>
     </form>

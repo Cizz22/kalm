@@ -64,7 +64,7 @@
     box-shadow: none;
 }
 
-.play-btn {
+#meditate-tab-1 .play-btn {
     margin-left: 125px;
     margin-top: 60px;
     border-radius: 50%;
@@ -72,16 +72,33 @@
     height: 60px;
 }
 
-.play-btn:focus {
+#meditate-tab-1 .play-btn:focus {
     border: none;
 }
 
-.fa-circle-play {
+#meditate-tab-1 .fa-circle-play {
     transition: all 300ms ease;
 }
 
-.fa-circle-play:hover {
+#meditate-tab-1  .fa-circle-play:hover {
     transform: scale(1.125);
+}
+
+#meditate-tab-2 .play-btn {
+    margin-left: 700px;
+    margin-top: 5 px;
+    width: 80px;
+    height: 80px;
+}
+
+#meditate-tab-2 .fa-play-circle {
+    font-size: 50px;
+    transition: all 300ms ease !important;
+    margin-left: 5px;
+}
+
+#meditate-tab-2 .fa-play-circle:hover {
+    transform: scale(1.125) !important;
 }
 
 .meditate-article1 {
@@ -120,6 +137,21 @@
 
 .med-tab {
     padding: 30px;
+}
+
+.next-btn {
+    background-color: #a4a3ff;
+    width: 700px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
 }
 
 .next-btn:hover {

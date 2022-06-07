@@ -36,8 +36,7 @@
                 @endforeach
             </div>
             <div class="d-flex justify-content-center py-5">
-                <button type="submit" class="btn mx-5 text-white btn-lg btn-block next-btn active"
-                    style="background-color: #a4a3ff; width:374px; border-radius: 38px;">
+                <button type="submit" class="btn mx-5 text-white btn-lg btn-block next-btn active">
                     NEXT
                 </button>
             </div>
