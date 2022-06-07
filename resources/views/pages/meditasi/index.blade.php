@@ -58,8 +58,8 @@
                                         </h6>
                                     </div>
                                     <div class="align-items-center ">
-                                        <button class="btn play-btn"><i class="fa-solid fa-circle-play"
-                                                style="font-size: 60px"></i></button>
+                                        <a href = "{{route('meditasi.open')}}"><button class="btn play-btn"><i class="fa-solid fa-circle-play"
+                                                style="font-size: 60px; color :#3F414E"></i></button></a>
                                     </div>
                                 </div>
                             </div>

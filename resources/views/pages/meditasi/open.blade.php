@@ -152,7 +152,7 @@
 <link rel="mask-icon" type="image/x-icon"
     href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg"
     color="#111">
-<title>CodePen - Music Player</title>
+{{-- <title>CodePen - Music Player</title> --}}
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 @endsection
