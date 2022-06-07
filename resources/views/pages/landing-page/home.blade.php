@@ -9,12 +9,11 @@
 
             <div class="lagu p-4">
                 <h4 style="color: white;">Focus Attention</h4>
-                <div class="d-flex flex-col align-items-center">
-                    <p class="p-0 m-0" style="color: white; font-size: 1.25rem;"> Currently Playing <span class="ms-3">
-                            &#9679;</span> <span class="ms-3">
-                            3 - 10 min</span> </p>
+                <div class="d-flex flex-col align-items-start">
+                    <p class="p-0 m-0" style="color: white; font-size: 1rem; width:150px;"> Currently Playing
+                            <br><span class="ms-1" style=""> 3 - 10 min</span> </p>
 
-                    <button type="button" class="btn play-btn hover"><i class="fas fa-play-circle" style="color: white;"></i></button>
+                    <button type="button" class="btn play-btn hover"><i class="fas fa-play-circle" style="color: white; margin-left:120px;"></i></button>
                 </div>
             </div>
 
@@ -23,9 +22,9 @@
                 @forelse ($konsultasi as $k)
                 <div class="lagu p-4">
                     <h4 style="color: white;">Session</h4>
-                    <div class="d-flex flex-col align-items-center">
-                        <p class="p-0 m-0" style="color: white; font-size: 1.25rem;">{{ $k->schedule }}</p>
-                        <a href="{{ route('konsultasi.videocall', ['id' => $k->id]) }}"><button type="button" class="btn btn-success start-btn hover">Start</button></a>
+                    <div class="d-flex w-100 align-items-center">
+                        <p style="color: white; font-size: 1rem; width:100px;">{{ $k->jadwal }}</p>
+                        <a href="{{ route('konsultasi.videocall', ['id' => $k->id]) }}"><button type="button" class="btn btn-success hover">Start</button></a>
                     </div>
                 </div>
                 @empty
