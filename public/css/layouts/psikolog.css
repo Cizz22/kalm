@@ -10,7 +10,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     grid-column-gap: 2rem;
-    grid-row-gap: 6rem;
+    grid-row-gap: 4rem;
 }
 
 .btn-psikolog:focus {
@@ -24,6 +24,16 @@
 
 .btn-psikolog {
     text-align: left;
+}
+
+.box-name{
+    border-radius: 0 10px 10px 0;
+
+}
+
+.psy-img {
+    border-radius: 10px 0 0 10px;
+    width: 100px;
 }
 
 .next-btn:hover {
