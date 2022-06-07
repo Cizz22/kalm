@@ -67,7 +67,8 @@ Route::middleware('auth')->group(function () {
 //Meditasi
 Route::middleware('auth')->group(function () {
     Route::get('/meditasi', [MeditasiController::class, 'index'])->name('meditasi.home');
-    Route::get('/meditasi/lagu', [MeditasiController::class, 'open'])->name('meditasi.open');
+    Route::get('/meditasi/lagu/{id}', [MeditasiController::class, 'open'])->name('meditasi.open');
+    Route::get('/meditasi/favourite/{id}', [MeditasiController::class, 'saveFavourite'])->name('meditasi.favourite');
 });
 
 

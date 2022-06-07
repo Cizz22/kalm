@@ -10,7 +10,7 @@
             <img src="https://hosseinghanbari.ir/other/music-player/autumn.jpg" alt="">
         </div>
         <div class="info">
-            <div class="title">Autumn</div>
+            <div class="title">{{$lagumeditasi -> judul}}</div>
             <div class="singer">Instrumental Music</div>
         </div>
         <div class="volume-box">
@@ -21,7 +21,7 @@
         </div>
         <div class="btn-box">
             <i class="material-icons repeat" onclick="handleRepeat()">repeat</i>
-            <i class="material-icons favorite active" onclick="handleFavorite()">favorite</i>
+            <a href = {{route('meditasi.favourite', ['id'=> $lagumeditasi -> id])}}><i class="material-icons favorite {{$fav ?'active' :null}}">favorite</i></a>
             <i class="material-icons volume" onclick="handleVolume()">volume_up</i>
         </div>
         <div class="music-box">
@@ -96,9 +96,9 @@
     // like
     var favIcon = document.querySelector('.favorite')
 
-    function handleFavorite() {
-        favIcon.classList.toggle('active');
-    }
+    // function handleFavorite() {
+    //     favIcon.classList.toggle('active');
+    // }
 
 
     // repeat

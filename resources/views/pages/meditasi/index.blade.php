@@ -58,7 +58,7 @@
                                         </h6>
                                     </div>
                                     <div class="align-items-center ">
-                                        <a href = "{{route('meditasi.open')}}"><button class="btn play-btn"><i class="fa-solid fa-circle-play"
+                                        <a href = "{{route('meditasi.open', ['id'=> $lagumeditasi1 -> id])}}"><button class="btn play-btn"><i class="fa-solid fa-circle-play"
                                                 style="font-size: 60px; color :#3F414E"></i></button></a>
                                     </div>
                                 </div>
@@ -97,9 +97,10 @@
                     </div>
                     <div class="tab-pane fade" id="meditate-tab-2" role="tabpanel" aria-labelledby="favourite-tab"
                         tabindex="0">
+                        @forelse ($lagu as $l)
                         <div class="row med-tab">
                             <div class="lagu p-4">
-                                <h4 style="color: white;">Focus Attention</h4>
+                                <h4 style="color: white;"> {{$l -> judul}}</h4>
                                 <div class="d-flex flex-col align-items-center">
                                     <p class="p-0 m-0" style="color: white; font-size: 1.25rem;"> Currently Playing
                                         <span class="ms-3">
@@ -112,6 +113,12 @@
                                 </div>
                             </div>
                         </div>
+                        @empty
+
+                        @endforelse
+
+
+
                     </div>
                     <div class="tab-pane fade" id="meditate-tab-3" role="tabpanel" aria-labelledby="favourite-tab"
                         tabindex="0">
