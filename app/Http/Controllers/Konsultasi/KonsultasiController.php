@@ -117,7 +117,6 @@ class KonsultasiController extends Controller
     public function checkout($konsultasiId)
     {
         $konsultasi = Konsultasi::find($konsultasiId);
-
         return view('pages.konsultasi.checkout', compact('konsultasi'));
     }
 
