@@ -4,7 +4,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col pt-5 left">
-                <h2>Good Morning, Kezia</h2>
+                <h2>Good Morning, {{ Auth::user()->name }}</h2>
                 <h5>We Wish you have a good day</h5>
 
                 <div class="lagu p-4">

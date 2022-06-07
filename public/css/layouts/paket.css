@@ -1,9 +1,8 @@
-
 /* by : Hajdah Aleyda */
 .container-fluid {
     list-style: none;
     text-align: center;
-    padding:0;
+    padding: 0;
     height: 100%;
     width: 100%;
 }
@@ -66,26 +65,8 @@ label {
     cursor: pointer;
 }
 
-.active {
-    background-color: #C9C8C8 !important;
-    box-shadow :0 0 10px #888888;
-    color : #000 !important;
-    border : 0;
-}
-
-.active::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 2px;
-    height: 32px;
-    display: none;
-    border :0;
-}
-
 .list-group-item-dark.list-group-item-action.active {
     color: #fff;
     background-color: #141619;
     /* border-color: #141619; */
 }
-

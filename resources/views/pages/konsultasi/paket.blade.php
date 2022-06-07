@@ -1,9 +1,14 @@
 {{-- page pilih paket konsultasi : Hajdah Aleyda --}}
-@extends('layouts.layout') @section('stylesheet')
-<link rel="stylesheet" href="{{ asset('css/layouts/paket.css') }}"> @endsection
+@extends('layouts.layout')
+
+@section('stylesheet')
+<link rel="stylesheet" href="{{ asset('css/layouts/paket.css') }}">
+@endsection
+
 @section('script')
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 @endsection
+
 @section('content')
 <!-- Background image -->
 

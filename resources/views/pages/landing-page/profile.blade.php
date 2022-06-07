@@ -13,8 +13,8 @@
                 <img src="{{ asset('img/profile-bg.png') }}" class="img-fluid">
                 <div class="d-flex flex-column justify-content-center align-middle align-items-center profile-picture">
                     <img src="{{ asset('img/foto-profil.png') }}" alt="foto-profil" class="user-picture">
-                    {{-- <h3 class="font-white text-center mt-2">{{Auth::user()->name}}</h3> --}}
-                    {{-- <p class="font-white text-center p-0 m-0">{{Auth::user()->tipeakun}}</p> --}}
+                    <h3 class="font-white text-center mt-2">{{ Auth::user()->name }}</h3>
+                    <p class="font-white text-center p-0 m-0">{{ Auth::user()->tipeakun }}</p>
                     <small class="font-white text-center">18 y.o. woman with high spirit and motivation</small>
                 </div>
             </div>
@@ -32,7 +32,7 @@
                     </div>
                     <div class="row">
                         <div class="col mt-2">
-                            <h4>Kezia's Favourite</h4>
+                            <h4>{{ Auth::user()->name }}'s Favourite</h4>
                         </div>
                     </div>
                     <div class="row">
@@ -54,16 +54,16 @@
                                 aria-labelledby="ambient-tab" tabindex="0">
                                 <ul class="list-group list-group-flush">
                                     @foreach ($favouriteSong as $f)
-                                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                                        <span><i class="fa-solid fa-circle-play" style="color: #8E97FD"></i>
-                                            <div class="d-inline-flex flex-column">
-                                                {{$f->lagu->judul}}
-                                                <small class="light-grey">10 min</small>
-                                            </div>
-                                        </span>
-                                        <span class="badge"><i class="fa-solid fa-heart"
-                                                style="color: #FF84A2;"></i></span>
-                                    </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <span><i class="fa-solid fa-circle-play" style="color: #8E97FD"></i>
+                                                <div class="d-inline-flex flex-column">
+                                                    {{ $f->lagu->judul }}
+                                                    <small class="light-grey">10 min</small>
+                                                </div>
+                                            </span>
+                                            <span class="badge"><i class="fa-solid fa-heart"
+                                                    style="color: #FF84A2;"></i></span>
+                                        </li>
                                     @endforeach
 
 
@@ -84,15 +84,15 @@
                                 aria-labelledby="psychologists-tab" tabindex="0">
                                 <ul class="list-group list-group-flush">
                                     @foreach ($psikolog as $p)
-                                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                                        <span><i class="fa-solid fa-circle-play" style="color: #8E97FD"></i>
-                                            <div class="d-inline-flex flex-column">
-                                                {{$p->name}}
-                                            </div>
-                                        </span>
-                                        <span class="badge"><i class="fa-solid fa-heart"
-                                                style="color: #FF84A2;"></i></span>
-                                    </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <span><i class="fa-solid fa-circle-play" style="color: #8E97FD"></i>
+                                                <div class="d-inline-flex flex-column">
+                                                    {{ $p->name }}
+                                                </div>
+                                            </span>
+                                            <span class="badge"><i class="fa-solid fa-heart"
+                                                    style="color: #FF84A2;"></i></span>
+                                        </li>
                                     @endforeach
 
                                     <li class="list-group-item d-flex justify-content-between align-items-center">
