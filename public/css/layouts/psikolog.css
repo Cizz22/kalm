@@ -3,7 +3,7 @@
     background-image: url("../../img/all-bg.png");
     background-repeat: no-repeat;
     background-size: cover;
-    width:100%;
+    width: 100%;
 }
 
 .grid {
@@ -19,6 +19,7 @@
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
+    border-radius: 16px;
 }
 
 .btn-psikolog {

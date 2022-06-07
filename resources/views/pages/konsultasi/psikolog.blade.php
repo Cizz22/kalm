@@ -17,11 +17,11 @@
             @csrf
             <div class="grid p-5">
                 @foreach ($psikolog as $p)
-                    <button class="btn-psikolog" type="button" style="border: none;" class="text-start"
+                    <button class="btn btn-psikolog p-0" type="button" style="border: none;" class="text-start"
                         onclick="$('#psikolog-{{ $p->id }}').prop('checked',true)">
-                        <div class="col-sm">
+                        <div class="container-fluid">
                             <div class="row">
-                                <div class="col-md-auto">
+                                <div class="col-md-auto p-0">
                                     <img src="{{ asset('img/psikolog-1.png') }}" alt="" style="width: 100px;">
                                 </div>
                                 <div class="col p-3 rounded" style="background-color:#E5D9D0;">
