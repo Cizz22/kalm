@@ -28,21 +28,27 @@
                 <a href="#" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span
                         class="nav_logo-name">KALM</span> </a>
                 <div class="nav_list">
-                    <a href="{{ route('landing.home') }}" class="nav_link {{ Route::current() ? 'active' : null }}">
+                    <a href="{{ route('landing.home') }}"
+                        class="nav_link {{ Route::is('landing.home') ? 'active' : null }}">
                         <i class='bx bxs-home nav_icon'></i>
                         <span class="nav_name">Home</span> </a>
-                    <a href="{{ route('jurnal.index') }}" class="nav_link {{ Route::current() ? 'active' : null }}">
+                    <a href="{{ route('jurnal.index') }}"
+                        class="nav_link {{ Route::is('jurnal.index') ? 'active' : null }}">
                         <i class='bx bxs-book-open nav_icon'></i>
                         <span class="nav_name">Journaling</span> </a>
-                    <a href="{{ route('konsultasi.home') }}" class="nav_link"> <i
+                    <a href="{{ route('konsultasi.home') }}"
+                        class="nav_link {{ Route::is('konsultasi.home') ? 'active' : null }}"> <i
                             class='bx bxs-group nav_icon'></i>
                         <span class="nav_name">Consulting</span> </a>
-                    <a href="{{ route('meditasi.home') }}" class="nav_link"> <i
+                    <a href="{{ route('meditasi.home') }}"
+                        class="nav_link {{ Route::is('meditasi.home') ? 'active' : null }}"> <i
                             class='bx bxs-leaf nav_icon'></i>
                         <span class="nav_name">Meditate</span> </a>
-                    <a href="" class="nav_link"> <i class='bx bxs-conversation nav_icon'></i>
+                    <a href="" class="nav_link {{ Route::is(null) ? 'active' : null }}"> <i
+                            class='bx bxs-conversation nav_icon'></i>
                         <span class="nav_name">Messages</span> </a>
-                    <a href="{{ route('landing.profile') }}" class="nav_link"> <i
+                    <a href="{{ route('landing.profile') }}"
+                        class="nav_link {{ Route::is('landing.profile') ? 'active' : null }}"> <i
                             class='bx bx-user nav_icon'></i>
                         <span class="nav_name">Me</span> </a>
                 </div>
