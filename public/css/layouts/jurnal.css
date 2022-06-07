@@ -1,10 +1,65 @@
-.jurnal-book{
+.jurnal-book {
     width: 140px;
     height: 180px;
 }
 
-.item{
-    border-left:2px solid #8292E1;
+input[id=date] {
+    border: none;
+    background-color: #FAF8F5;
+    outline: 0;
+    font-size: 18px;
+    width: 250px;
+    height: 30px;
+}
+
+input[id=date]:focus {
+    border: none;
+    background-color: #FAF8F5;
+    outline: 0;
+    width: 250x;
+    height: 30px;
+}
+
+input[id=judul] {
+    border: none;
+    background-color: #F2F2F7;
+    outline: 0;
+    font-size: 32px;
+    width: 600px;
+    height: 35px;
+}
+
+input[id=judul]:focus {
+    border: none;
+    background-color: #F2F2F7;
+    outline: 0;
+    width: 600px;
+    height: 35px;
+}
+
+textarea[id=isi-jurnal] {
+    border: none;
+    background-color: #F2F2F7;
+    outline: 0;
+    font-size: 18px;
+    width: 600px;
+    height: 30px;
+}
+
+textarea[id=isi-jurnal]:focus {
+    border: none;
+    background-color: #F2F2F7;
+    outline: 0;
+    width: 600px;
+    height: 30px;
+}
+
+::placeholder {
+    color: black;
+}
+
+.item {
+    border-left: 2px solid #8292E1;
     padding-left: 15px;
 }
 
@@ -13,13 +68,12 @@
     color: grey;
 }
 
-.left{
+.left {
     background-color: #FBF5EB;
 }
 
-.right{
+.right {
     background-image: url('../../img/payment-bg.png');
     background-size: contain;
     background-position-y: 48em;
 }
-
