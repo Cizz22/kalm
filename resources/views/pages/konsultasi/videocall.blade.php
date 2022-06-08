@@ -15,8 +15,7 @@
         <div class="row">
             <div class="col-8 justify-content-center">
                 <div class="ratio ratio-16x9">
-                    <video-chat :psikologuser="{{ $psikolog }}" :authUserId="{{ Auth::id() }}" turn_url="{{ env('TURN_SERVER_URL') }}"
-                        turn_username="{{ env('TURN_SERVER_USERNAME') }}" turn_credential="{{ env('TURN_SERVER_CREDENTIAL') }}" />
+                        <video-chat :user="{{ $user }}" :others="{{ $psikolog }}" pusher-key="{{ config('broadcasting.connections.pusher.key') }}" pusher-cluster="{{ config('broadcasting.connections.pusher.options.cluster') }}"></video-chat>
                 </div>
             </div>
             <div class="col-4">
@@ -63,4 +62,8 @@
                 Call</a>
         </div>
     </div>
+@endsection
+
+@section('script')
+<script src="{{mix('js/app.js')}}"></script>
 @endsection
