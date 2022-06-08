@@ -61,7 +61,8 @@ Route::middleware('auth')->group(function () {
 //Journaling
 Route::middleware('auth')->group(function () {
     Route::get('/jurnal', [JurnalController::class, 'index'])->name('jurnal.index');
-    Route::get('/jurnal/:slug', [JurnalController::class, 'jurnal'])->name('jurnal.open');
+    Route::get('/jurnal/{id}', [JurnalController::class, 'jurnal'])->name('jurnal.open');
+    Route::post('/jurnal/save', [JurnalController::class, 'save'])->name('jurnal.save');
 });
 
 //Meditasi
@@ -122,6 +123,10 @@ Route::prefix('testing')->group(function () {
 
     Route::get('/jurnal', function () {
         return view('pages.jurnal.index');
+    });
+
+    Route::get('/jurnal/open', function () {
+        return view('pages.jurnal.open');
     });
 
     Route::get('/meditasi', function () {

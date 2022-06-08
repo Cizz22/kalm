@@ -20,6 +20,6 @@ class Jurnal extends Model
     }
 
     public function draft(){
-        return $this->hasMany(DraftJurnal::class);
+        return $this->hasOne(DraftJurnal::class);
     }
 }
