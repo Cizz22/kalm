@@ -19,14 +19,14 @@
     <form action="{{ route('jurnal.save') }}" method="POST">
         @csrf
         <div class="py-3 px-3">
-            <h2>{{$jurnal -> created_at -> format('d-m-Y')}}</h2>
+            <h1>{{$jurnal -> created_at -> format('l, j M Y')}}</h1>
             <!-- <h3 id="date"></h3> -->
         </div>
         <div class="mt-5 pt-5">
             <div class="card jurnal-body w-100" style="background-color: #F2F2F7">
                 <div class="card-body p-5">
                     <input name="judul" type="text" id="judul" placeholder="Judul"  value="{{ $jurnal->judul}}"/> <br>
-                    <textarea name="konten" id="isi-jurnal" placeholder="Write your feeling here ..." rows="8" cols="50">{{ $jurnal->draft->konten }}</textarea>
+                    <textarea name="konten" id="isi-jurnal" placeholder="Write your feeling here ..." class="pt-3">{{ $jurnal->draft->konten }}</textarea>
                     <br>
                     <button type="submit" class="btn">BACK</button>
                 </div>

@@ -1,4 +1,4 @@
-/* //Created by Muhammad Ridho Waradana 5026201084 */
+/* Created by Muhammad Ridho Waradana 5026201084 */
 .nav-link {
     color: #495057;
 }
@@ -26,6 +26,28 @@
     top: 4em;
     right: 35vw;
     width: 300px;
+}
+
+@media (max-width: 768px) {
+    .profile-picture {
+        top: 2em;
+        right: 25vw;
+        width: 300px;
+    }
+    .user-picture {
+        height: 100px;
+        width: 100px !important;
+    }
+}
+@media (max-width: 376px) {
+    .profile-picture {
+        top: 0.25em;
+        right: 0.5vw;
+    }
+    .user-picture {
+        height: 25px;
+        width: 25px !important;
+    }
 }
 
 .user-picture {
