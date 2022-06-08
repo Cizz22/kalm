@@ -42,9 +42,16 @@
             <span class="d-flex justify-content-between badge bg-primary rounded-pill">Rp.280.000</span>
             </div> --}}
             </button>
-            <input type="radio" style="cursor: pointer;display:none" name="paket_id" value="{{ $p->id }}" id="paket-{{ $p->id }}" />
+            <input type="radio" style="cursor: pointer;display:none;" name="paket_id" value="{{ $p->id }}" id="paket-{{ $p->id }}" />
         @endforeach
+        @error('paket_id')
+      <div class="py-3 mt-3 alert alert-danger w-75 mx-auto ">
+          Choose a package first
       </div>
+      @enderror
+
+      </div>
+
       <div class="bottom-center">
         <button type="submit" class="btn">
             APPLY PACKAGE
@@ -54,7 +61,6 @@
 
     <!-- Next button -->
 
-</form>
     <!-- <div class="row d-flex justify-content-center">
         <div class="col-md-6"> -->
 
@@ -63,10 +69,10 @@
 
 
     <!-- Bootstrap datepicker CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" />
+    {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" />
 
     <!-- Bootstrap datepicker JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
-    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/app.js') }}"></script> --}}
     @endsection
 

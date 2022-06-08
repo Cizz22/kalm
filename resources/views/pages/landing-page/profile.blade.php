@@ -26,7 +26,7 @@
                     <div class="col">
                         <div class="d-flex flex-row gap-3">
                             <p><i class="fa-solid fa-headphones" style="color: #7FD2F2;"></i> 3 Listenings</p>
-                            <p><i class="fa-solid fa-heart" style="color: #FF84A2;"></i> 10 Favourites</p>
+                            <p><i class="fa-solid fa-heart" style="color: #FF84A2;"></i> {{Auth::user()->laguFavorit->count()}} Favourites</p>
                         </div>
                     </div>
                     <div class="row">

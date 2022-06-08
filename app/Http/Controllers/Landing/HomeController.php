@@ -11,7 +11,13 @@ class HomeController extends Controller
 {
 
     public function index(){
-        $konsultasi = Auth::user()->konsultasi;
+
+        if(Auth::user()->tipeakun="PATIENT"){
+            $konsultasi = Auth::user()->konsultasi;
+        }else{
+            $konsultasi = Konsultasi::where('psikolog_id', Auth::id());
+        }
+
         $meditasi = session('meditasi');
 
         return view('pages.landing-page.home', compact(['konsultasi', 'meditasi']));

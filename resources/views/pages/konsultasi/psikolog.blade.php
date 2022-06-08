@@ -35,6 +35,11 @@
                         value="{{ $p->id }}" id="psikolog-{{ $p->id }}" />
                 @endforeach
             </div>
+            @error('psikolog_id')
+            <div class="py-3 mt-3 alert alert-danger w-50 mx-auto ">
+                Choose a Psychologist first
+            </div>
+            @enderror
             <div class="d-flex justify-content-center py-5">
                 <button type="submit" class="btn mx-5 text-white btn-lg btn-block next-btn active">
                     NEXT
