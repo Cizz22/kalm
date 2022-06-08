@@ -55,7 +55,6 @@
                     Out</span> </a>
 
             <form hidden action="{{ route('logout') }}" method="POST" id="logout">@csrf</form>
-
         </nav>
     </div>
     <!--Container Main start-->
