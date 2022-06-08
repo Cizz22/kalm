@@ -28,7 +28,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('guest')->group(function () {
     Route::get('/', [WelcomeController::class, 'index'])->name('welcome');
     Route::get('/login', [LoginController::class, 'index'])->name('login');
-    Route::get('/forgot', [LoginController::class, 'forgot'])->name('forgot');
+    //sRoute::get('/forgot', [LoginController::class, 'forgot'])->name('forgot');
     Route::get('/register', [RegisterController::class, 'index'])->name('register');
     Route::post('/register', [RegisterController::class, 'register'])->name('register.post');
 });
@@ -54,6 +54,9 @@ Route::middleware('auth')->group(function () {
     Route::get('konsultasi/checkout/{konsultasiId}', [KonsultasiController::class, 'checkout'])->name('konsultasi.checkout');
 
     Route::get('/konsultasi/videocall/{id}', [VideoCallController::class, 'index'])->name('konsultasi.videocall');
+
+    Route::get('/access_token', [VideoCallController::class, 'generate_token']);
+    Route::post('/video/auth', [VideoCallController::class, 'auth'] );
     Route::post('/video/call-user', 'App\Http\Controllers\VideoChatController@callUser');
     Route::post('/video/accept-call', 'App\Http\Controllers\VideoChatController@acceptCall');
 });

@@ -17,6 +17,6 @@ use Illuminate\Support\Facades\Broadcast;
 //     return (int) $user->id === (int) $id;
 // });
 
-Broadcast::channel('presence-video-channel', function($user) {
+Broadcast::channel('client-signal-{id}', function($user) {
     return ['id' => $user->id, 'name' => $user->name];
 });

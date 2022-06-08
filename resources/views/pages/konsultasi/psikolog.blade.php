@@ -156,4 +156,23 @@
 
 
     </div>
+    <script>
+        @if($errors->any())
+
+        Swal.fire({
+      icon: 'error',
+      text: 'GAGAL!',
+      title: '{{ session('error') }}',
+      showConfirmButton: false,
+      timer: 3000
+  })
+
+  @endif
+  </script>
+@endsection
+
+@section('stylesheet')
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
 @endsection
