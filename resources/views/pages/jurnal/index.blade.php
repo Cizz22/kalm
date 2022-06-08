@@ -42,7 +42,7 @@
                             <div>
                                 <h4>{{$j -> judul}}</h4>
                                 <div class="d-flex justify-content-between">
-                                    <span>{{$j -> created_at -> format('d-m-Y')}}</span>
+                                    <span>{{$j -> created_at -> format('j M Y - H:i')}}</span>
                                 </div>
                             </div>
                             <div>
@@ -68,7 +68,7 @@
                     <div class="card jurnal-body w-100" style="background-color: #F2F2F7">
                         <div class="card-body p-5">
                             <input name="judul" type="text" id="judul" placeholder="Judul" /> <br>
-                            <textarea name="konten" id="isi-jurnal" placeholder="Write your feeling here ..." rows="8" cols="50"></textarea>
+                            <textarea name="konten" id="isi-jurnal" placeholder="Write your feeling here ..." class="pt-2"></textarea>
                             <br>
                             <button type="submit" class="btn"></button>
                         </div>
