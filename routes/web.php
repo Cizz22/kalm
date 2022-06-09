@@ -56,7 +56,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/konsultasi/videocall/{id}', [VideoCallController::class, 'index'])->name('konsultasi.videocall');
 
     Route::get('/access_token', [VideoCallController::class, 'generate_token']);
-    Route::post('/video/auth', [VideoCallController::class, 'auth'] );
+    Route::post('/video/auth', [VideoCallController::class, 'auth']);
     Route::post('/video/call-user', 'App\Http\Controllers\VideoChatController@callUser');
     Route::post('/video/accept-call', 'App\Http\Controllers\VideoChatController@acceptCall');
 });
@@ -108,7 +108,7 @@ Route::prefix('testing')->group(function () {
         return view('pages.konsultasi.index');
     });
 
-    Route::get('/konsultasi/psikolog', function(){
+    Route::get('/konsultasi/psikolog', function () {
         return view('pages.konsultasi.psikolog');
     });
 
@@ -116,7 +116,7 @@ Route::prefix('testing')->group(function () {
         return view('pages.konsultasi.checkout');
     });
 
-    Route::get('/konsultasi/paket', function(){
+    Route::get('/konsultasi/paket', function () {
         return view('pages.konsultasi.paket');
     });
 

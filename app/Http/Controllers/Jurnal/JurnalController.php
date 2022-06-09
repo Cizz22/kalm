@@ -23,18 +23,31 @@ class JurnalController extends Controller
     {
         $judul = $request->judul;
         $konten = $request->konten;
+        $id = $request->id;
 
-        $jurnal = Jurnal::create([
-            'user_id' => Auth::id(),
-            'judul' => $judul,
-            'template_id' => 1
-        ]);
+        $jurnalCheck = Jurnal::find($id);
+        if ($jurnalCheck) {
+            $jurnalCheck->update([
+                'judul' => $judul,
+                'template_id' => 1
+            ]);
 
-        DraftJurnal::create([
-            'konten' => $konten,
-            'jurnal_id' => $jurnal->id
-        ]);
+            $jurnalCheck->draft->update([
+                'konten' => $konten
+            ]);
+        } else {
 
+            $jurnal = Jurnal::create([
+                'user_id' => Auth::id(),
+                'judul' => $judul,
+                'template_id' => 1
+            ]);
+
+            DraftJurnal::create([
+                'konten' => $konten,
+                'jurnal_id' => $jurnal->id
+            ]);
+        }
         return redirect()->route('jurnal.index');
     }
 
