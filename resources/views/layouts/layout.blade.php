@@ -28,7 +28,7 @@
                 <a href="/" class="nav_logo"><img src="{{ asset('img/logo-kalm.png') }}" alt=""
                         class="nav_logo-icon"><span class="nav_logo-name">KALM</span> </a>
                 <div class="nav_list">
-                    @if (Auth::user()->tipe_akun == "PSYCHOLOGIST")
+                    @if (!$patient)
                     <a href="{{ route('landing.home') }}"
                     class="nav_link {{ Route::is('landing.home') ? 'active' : null }}">
                     <i class='bx bxs-home nav_icon'></i>
@@ -37,8 +37,7 @@
                     class="nav_link {{ Route::is('landing.profile') ? 'active' : null }}"> <i
                         class='bx bx-user nav_icon'></i>
                     <span class="nav_name">Me</span> </a>
-
-                    @elseif (Auth::user()->tipe_akun == "PATIENT")
+                    @else
                     <a href="{{ route('landing.home') }}"
                     class="nav_link {{ Route::is('landing.home') ? 'active' : null }}">
                     <i class='bx bxs-home nav_icon'></i>
