@@ -43,7 +43,7 @@ Route::middleware('auth')->group(function () {
 //Konsultasi
 Route::middleware('auth')->group(function () {
     Route::get('/konsultasi', [KonsultasiController::class, 'index'])->name('konsultasi.home');
-    Route::post('/konsultasi', [KonsultasiController::class, 'postSchedule'])->name('konsultasi.schedule.post');
+    Route::post('/konsultasi', [KonsultasiController::class, 'postTopik'])->name('konsultasi.schedule.post');
 
     Route::get('/konsultasi/psikolog', [KonsultasiController::class, 'psikolog'])->name('konsultasi.psikolog');
     Route::post('/konsultasi/psikolog', [KonsultasiController::class, 'postPsikolog'])->name('konsultasi.psikolog.post');

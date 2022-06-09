@@ -111,7 +111,7 @@
 
                                     {{-- <a href = "{{route('meditasi.open')}}"><button type="button" class="btn play-btn hover"><i class="fas fa-play-circle"
                                             style="color: white;"></i></button></a> --}}
-                                            <a href = "#"><button type="button" class="btn play-btn hover"><i class="fas fa-play-circle"
+                                            <a href = "{{route('meditasi.open', ['id'=> $l->id])}}"><button type="button" class="btn play-btn hover"><i class="fas fa-play-circle"
                                                 style="color: white;"></i></button></a>
                                 </div>
                             </div>

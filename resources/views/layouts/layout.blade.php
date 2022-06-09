@@ -28,26 +28,38 @@
                 <a href="/" class="nav_logo"><img src="{{ asset('img/logo-kalm.png') }}" alt=""
                         class="nav_logo-icon"><span class="nav_logo-name">KALM</span> </a>
                 <div class="nav_list">
+                    @if (!$patient)
                     <a href="{{ route('landing.home') }}"
-                        class="nav_link {{ Route::is('landing.home') ? 'active' : null }}">
-                        <i class='bx bxs-home nav_icon'></i>
-                        <span class="nav_name">Home</span> </a>
-                    <a href="{{ route('jurnal.index') }}"
-                        class="nav_link {{ Route::is('jurnal.index') ? 'active' : null }}">
-                        <i class='bx bxs-book-open nav_icon'></i>
-                        <span class="nav_name">Journaling</span> </a>
-                    <a href="{{ route('konsultasi.home') }}"
-                        class="nav_link {{ Route::is('konsultasi.home') || Route::is('konsultasi.psikolog') || Route::is('konsultasi.paket') || Route::is('konsultasi.checkout') ? 'active' : null }}">
-                        <i class='bx bxs-group nav_icon'></i>
-                        <span class="nav_name">Consulting</span> </a>
-                    <a href="{{ route('meditasi.home') }}"
-                        class="nav_link {{ Route::is('meditasi.home') ? 'active' : null }}"> <i
-                            class='bx bxs-leaf nav_icon'></i>
-                        <span class="nav_name">Meditate</span> </a>
+                    class="nav_link {{ Route::is('landing.home') ? 'active' : null }}">
+                    <i class='bx bxs-home nav_icon'></i>
+                    <span class="nav_name">Home</span> </a>
                     <a href="{{ route('landing.profile') }}"
-                        class="nav_link {{ Route::is('landing.profile') ? 'active' : null }}"> <i
-                            class='bx bx-user nav_icon'></i>
-                        <span class="nav_name">Me</span> </a>
+                    class="nav_link {{ Route::is('landing.profile') ? 'active' : null }}"> <i
+                        class='bx bx-user nav_icon'></i>
+                    <span class="nav_name">Me</span> </a>
+                    @else
+                    <a href="{{ route('landing.home') }}"
+                    class="nav_link {{ Route::is('landing.home') ? 'active' : null }}">
+                    <i class='bx bxs-home nav_icon'></i>
+                    <span class="nav_name">Home</span> </a>
+                <a href="{{ route('jurnal.index') }}"
+                    class="nav_link {{ Route::is('jurnal.index') ? 'active' : null }}">
+                    <i class='bx bxs-book-open nav_icon'></i>
+                    <span class="nav_name">Journaling</span> </a>
+                <a href="{{ route('konsultasi.home') }}"
+                    class="nav_link {{ Route::is('konsultasi.home') || Route::is('konsultasi.psikolog') || Route::is('konsultasi.paket') || Route::is('konsultasi.checkout') ? 'active' : null }}">
+                    <i class='bx bxs-group nav_icon'></i>
+                    <span class="nav_name">Consulting</span> </a>
+                <a href="{{ route('meditasi.home') }}"
+                    class="nav_link {{ Route::is('meditasi.home') ? 'active' : null }}"> <i
+                        class='bx bxs-leaf nav_icon'></i>
+                    <span class="nav_name">Meditate</span> </a>
+                    <a href="{{ route('landing.profile') }}"
+                    class="nav_link {{ Route::is('landing.profile') ? 'active' : null }}"> <i
+                        class='bx bx-user nav_icon'></i>
+                    <span class="nav_name">Me</span> </a>
+                    @endif
+
                 </div>
             </div> <a class="nav_link" onclick="event.preventDefault(); document.getElementById('logout').submit();
             "> <i class='bx bx-log-out nav_icon pe-auto' style="cursor: pointer;"></i> <span class="nav_name"
@@ -55,7 +67,6 @@
                     Out</span> </a>
 
             <form hidden action="{{ route('logout') }}" method="POST" id="logout">@csrf</form>
-
         </nav>
     </div>
     <!--Container Main start-->

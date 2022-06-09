@@ -31,7 +31,7 @@ class KonsultasiController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function postSchedule(Request $request)
+    public function postTopik(Request $request)
     {
         $validate = $request->validate(([
             'topik_id' => 'required',
@@ -55,7 +55,7 @@ class KonsultasiController extends Controller
     public function psikolog()
     {
         $psikolog = User::where('tipeakun', 'psikolog')->get();
-        return view('pages.konsultasi.psikolog', compact('psikolog'));
+        return view('pages.konsultasi.choosePsychologist', compact('psikolog'));
     }
 
 

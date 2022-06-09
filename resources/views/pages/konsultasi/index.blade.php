@@ -20,6 +20,11 @@
                 <option value="{{$t->id}}">{{$t->nama}}</option>
                 @endforeach
             </select>
+            @error('topik_id')
+            <div class="mt-2 alert alert-danger">
+                Choose the required field
+            </div>
+            @enderror
 
             <!-- Schedule input -->
             <div class="my-3 ">
@@ -35,6 +40,11 @@
                     </div>
                 </div>
             </div>
+             @error('jadwal')
+            <div class="mt-2 alert alert-danger">
+                Choose the required field
+            </div>
+            @enderror
         </div>
 
 
