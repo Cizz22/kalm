@@ -7,11 +7,13 @@ use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
-    public function index(){
+    public function index()
+    {
 
         return view('pages.auth.login');
     }
-    public function forgot(){
+    public function forgot()
+    {
 
         return view('pages.auth.forgot');
     }

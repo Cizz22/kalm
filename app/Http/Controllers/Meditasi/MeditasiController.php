@@ -15,39 +15,41 @@ use function PHPUnit\Framework\isEmpty;
 class MeditasiController extends Controller
 {
 
-    public function index(){
-        $lagu = LaguMeditasi :: all();
-        $fav = Auth::User()-> laguFavorit;
-        $lagumeditasi1 = $lagu -> first();
+    public function index()
+    {
+        $lagu = LaguMeditasi::all();
+        $fav = Auth::User()->laguFavorit;
+        $lagumeditasi1 = $lagu->first();
         return view('pages.meditasi.index', compact(['lagu', 'fav', 'lagumeditasi1']));
     }
 
-    public function open($id){
+    public function open($id)
+    {
         $lagumeditasi = LaguMeditasi::find($id);
         $userfav = Auth::user()->laguFavorit;
-
-        if($userfav->isEmpty()){  //user tidak memfavoritkan apa2
+        if ($userfav->isEmpty()) {  //user tidak memfavoritkan apa2
             $fav = false;
-        }else{
-            if($userfav->where('lagu_id', $id)){ //cari spesifik lagu di favorit, tiap lagu idnya beda2
+        } else {
+            if ($userfav->where('lagu_id', $id)->first()) { //cari spesifik lagu di favorit, tiap lagu idnya beda2
                 $fav = true;
-            }else{
+            } else {
                 $fav = false; //kalo misal lagu nya gaada di lagu favorit, berarti lagu bukan favorit user
             }
         }
-        return view('pages.meditasi.open', compact(['lagumeditasi','fav']));
+        return view('pages.meditasi.open', compact(['lagumeditasi', 'fav']));
     }
 
-    public function saveFavourite($id){
-        $fav = LaguMeditasiFavorite :: where('lagu_id', $id) -> first();
+    public function saveFavourite($id)
+    {
+        $fav = LaguMeditasiFavorite::where('lagu_id', $id)->first();
         if (!$fav) {
-             LaguMeditasiFavorite::create([
+            LaguMeditasiFavorite::create([
                 'user_id' => Auth::user()->id,
                 'lagu_id' => $id
             ]);
-        }else {
-            $fav -> delete();
+        } else {
+            $fav->delete();
         }
-        return redirect() -> route('meditasi.open', $id);
+        return redirect()->route('meditasi.open', $id);
     }
 }

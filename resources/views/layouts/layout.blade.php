@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="UTF-8">
-     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -28,37 +28,26 @@
                 <a href="/" class="nav_logo"><img src="{{ asset('img/logo-kalm.png') }}" alt=""
                         class="nav_logo-icon"><span class="nav_logo-name">KALM</span> </a>
                 <div class="nav_list">
-                    @if (!$patient)
                     <a href="{{ route('landing.home') }}"
-                    class="nav_link {{ Route::is('landing.home') ? 'active' : null }}">
-                    <i class='bx bxs-home nav_icon'></i>
-                    <span class="nav_name">Home</span> </a>
+                        class="nav_link {{ Route::is('landing.home') ? 'active' : null }}">
+                        <i class='bx bxs-home nav_icon'></i>
+                        <span class="nav_name">Home</span> </a>
+                    <a href="{{ route('jurnal.index') }}"
+                        class="nav_link {{ Route::is('jurnal.index') ? 'active' : null }}">
+                        <i class='bx bxs-book-open nav_icon'></i>
+                        <span class="nav_name">Journaling</span> </a>
+                    <a href="{{ route('konsultasi.home') }}"
+                        class="nav_link {{ Route::is('konsultasi.home') || Route::is('konsultasi.psikolog') || Route::is('konsultasi.paket') || Route::is('konsultasi.checkout') ? 'active' : null }}">
+                        <i class='bx bxs-group nav_icon'></i>
+                        <span class="nav_name">Consulting</span> </a>
+                    <a href="{{ route('meditasi.home') }}"
+                        class="nav_link {{ Route::is('meditasi.home') ? 'active' : null }}"> <i
+                            class='bx bxs-leaf nav_icon'></i>
+                        <span class="nav_name">Meditate</span> </a>
                     <a href="{{ route('landing.profile') }}"
-                    class="nav_link {{ Route::is('landing.profile') ? 'active' : null }}"> <i
-                        class='bx bx-user nav_icon'></i>
-                    <span class="nav_name">Me</span> </a>
-                    @else
-                    <a href="{{ route('landing.home') }}"
-                    class="nav_link {{ Route::is('landing.home') ? 'active' : null }}">
-                    <i class='bx bxs-home nav_icon'></i>
-                    <span class="nav_name">Home</span> </a>
-                <a href="{{ route('jurnal.index') }}"
-                    class="nav_link {{ Route::is('jurnal.index') ? 'active' : null }}">
-                    <i class='bx bxs-book-open nav_icon'></i>
-                    <span class="nav_name">Journaling</span> </a>
-                <a href="{{ route('konsultasi.home') }}"
-                    class="nav_link {{ Route::is('konsultasi.home') || Route::is('konsultasi.psikolog') || Route::is('konsultasi.paket') || Route::is('konsultasi.checkout') ? 'active' : null }}">
-                    <i class='bx bxs-group nav_icon'></i>
-                    <span class="nav_name">Consulting</span> </a>
-                <a href="{{ route('meditasi.home') }}"
-                    class="nav_link {{ Route::is('meditasi.home') ? 'active' : null }}"> <i
-                        class='bx bxs-leaf nav_icon'></i>
-                    <span class="nav_name">Meditate</span> </a>
-                    <a href="{{ route('landing.profile') }}"
-                    class="nav_link {{ Route::is('landing.profile') ? 'active' : null }}"> <i
-                        class='bx bx-user nav_icon'></i>
-                    <span class="nav_name">Me</span> </a>
-                    @endif
+                        class="nav_link {{ Route::is('landing.profile') ? 'active' : null }}"> <i
+                            class='bx bx-user nav_icon'></i>
+                        <span class="nav_name">Me</span> </a>
 
                 </div>
             </div> <a class="nav_link" onclick="event.preventDefault(); document.getElementById('logout').submit();
