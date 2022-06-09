@@ -16,7 +16,8 @@ class RegisterController extends Controller
     }
 
 
-    public function register(Request $request){
+    public function register(Request $request)
+    {
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
@@ -25,12 +26,12 @@ class RegisterController extends Controller
             'tipeakun' => 'string|required'
         ]);
 
-        if($request->password != $request->password_confirmation){
+        if ($request->password != $request->password_confirmation) {
             session()->flash('error', 'Password dan konfirmasi harus sama');
             return;
         }
 
-       $newUser =  User::create([
+        $newUser =  User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
@@ -38,6 +39,6 @@ class RegisterController extends Controller
         ]);
 
         Auth::login($newUser);
-        redirect()->route('landing.home');
+        return redirect()->route('landing.home');
     }
 }
