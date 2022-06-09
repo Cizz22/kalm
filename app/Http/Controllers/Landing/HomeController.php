@@ -13,10 +13,10 @@ class HomeController extends Controller
     public function index()
     {
 
-        if (Auth::user()->tipeakun = "PATIENT") {
+        if (Auth::user()->tipeakun == "PATIENT") {
             $konsultasi = Auth::user()->konsultasi;
         } else {
-            $konsultasi = Konsultasi::where('psikolog_id', Auth::id());
+            $konsultasi = Konsultasi::where('psikolog_id', Auth::user()->id)->get();
         }
 
         $meditasi = session('meditasi');
